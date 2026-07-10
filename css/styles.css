@@ -362,12 +362,14 @@ a {
 }
 
 .hero-tagline {
-  font-size: clamp(0.95rem, calc(0.9rem + 0.2vw), 1.05rem);
-  line-height: 1.65;
+  width: 88%;
+  max-width: 320px;
+  font-size: clamp(0.72rem, calc(0.7rem + 0.18vw), 0.82rem);
+  line-height: 1.55;
+  text-align: center;
   color: rgba(255, 255, 255, 0.78);  /* against the dark video overlay */
   margin-block: clamp(18px, 2.5vw, 24px) clamp(28px, 4vw, 36px);
   margin-inline: auto;
-  max-width: 600px;
 }
 
 /* Hero CTA inverted for the dark video: white button, black text.
