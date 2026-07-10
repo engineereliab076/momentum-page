@@ -23,11 +23,10 @@
   <!-- ===================== HEADER / NAV ===================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- ===== LOGO PLACEHOLDER =====
-           Replace this block with the final logo (e.g. an <img> or inline SVG).
-           For now it's the "Momentum" wordmark. -->
-      <a href="#hero" class="wordmark" aria-label="Momentum home">Momentum</a>
-      <!-- ===== END LOGO PLACEHOLDER ===== -->
+      <a href="#hero" class="brand" aria-label="Momentum home">
+        <img src="photos/trajectory-mono-light.png" alt="Momentum logo" class="brand-logo" />
+        <span class="brand-name">Momentum</span>
+      </a>
 
       <nav class="nav" aria-label="Primary">
         <button
@@ -51,14 +50,26 @@
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <div class="container hero-inner reveal">
-        <h1 class="hero-wordmark">Momentum</h1>
-        <p class="hero-tagline">
+      <!-- Decorative background video, sits behind a dark overlay -->
+      <video class="hero-video" autoplay loop muted playsinline aria-hidden="true">
+        <source src="videos/city.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <h1 class="hero-wordmark hero-anim">Momentum</h1>
+        <p class="hero-tagline hero-anim">
           A marketing and technology studio building brands that move —
           and the systems that keep them moving.
         </p>
-        <a href="#contact" class="btn btn-lg">Get in touch</a>
+        <a href="#contact" class="btn btn-lg hero-anim">Get in touch</a>
       </div>
+
+      <!-- Scroll-down indicator -->
+      <a href="#services" class="scroll-indicator" aria-label="Scroll to services">
+        <span class="scroll-indicator-text">Scroll</span>
+        <span class="scroll-indicator-line"><span class="scroll-indicator-dot"></span></span>
+      </a>
     </section>
 
     <!-- ===================== SERVICES ===================== -->
@@ -72,38 +83,50 @@
         <div class="services-grid">
           <article class="service-card reveal">
             <span class="service-index">01</span>
-            <h3>Brand Identity</h3>
-            <p>Logos, systems, and visual language that make you unmistakable.</p>
+            <h3>Brand Strategy &amp; Identity</h3>
+            <p>We shape distinctive brands through strategy, positioning and cohesive visual identity systems.</p>
           </article>
 
           <article class="service-card reveal">
             <span class="service-index">02</span>
-            <h3>Website Development</h3>
-            <p>Fast, responsive sites engineered to convert visitors into customers.</p>
+            <h3>Graphic Design &amp; Creative Services</h3>
+            <p>We create clear, compelling visual communication across digital, print and campaign materials.</p>
           </article>
 
           <article class="service-card reveal">
             <span class="service-index">03</span>
-            <h3>Paid Advertising</h3>
-            <p>Targeted campaigns across search and social that scale profitably.</p>
+            <h3>Website &amp; Digital Development</h3>
+            <p>We design and build websites, digital platforms and custom experiences that are fast, functional and built around real needs.</p>
           </article>
 
           <article class="service-card reveal">
             <span class="service-index">04</span>
             <h3>AI &amp; Business Automation</h3>
-            <p>Workflows and assistants that remove busywork and cut response times.</p>
+            <p>We build intelligent systems and automated workflows that reduce repetitive work and improve how businesses operate.</p>
           </article>
 
           <article class="service-card reveal">
             <span class="service-index">05</span>
-            <h3>Content Production</h3>
-            <p>Photography, video, and copy produced to a consistent premium standard.</p>
+            <h3>Marketing Strategy</h3>
+            <p>We develop focused strategies that connect brands with the right audiences, channels and opportunities for growth.</p>
           </article>
 
           <article class="service-card reveal">
             <span class="service-index">06</span>
-            <h3>Data Management</h3>
-            <p>We turn your raw data into custom AI solutions that drive decisions.</p>
+            <h3>Paid Advertising</h3>
+            <p>We plan, launch and optimize targeted advertising campaigns designed to reach the right people and drive measurable action.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-index">07</span>
+            <h3>Social Media Services</h3>
+            <p>We build and manage thoughtful social media systems across strategy, content, campaigns and audience engagement.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-index">08</span>
+            <h3>Event Branding &amp; Promotion</h3>
+            <p>We create cohesive event identities and promotional campaigns across design, digital platforms, advertising and audience communication.</p>
           </article>
         </div>
       </div>
@@ -113,13 +136,13 @@
     <section class="section section-alt" id="about">
       <div class="container about-inner reveal">
         <header class="section-head">
-          <p class="eyebrow">Who we are</p>
-          <h2 class="section-title">Why Momentum</h2>
+          <p class="eyebrow"></p>
+          <h2 class="section-title">Who we are</h2>
         </header>
         <div class="about-body">
           <p>
             Momentum is a marketing and technology studio for businesses of every
-            size — from startups finding their first customers to established
+            size,from startups finding their first customers to established
             companies scaling what already works. We pair sharp creative with
             practical engineering, so strategy actually ships.
           </p>
@@ -144,34 +167,49 @@
           <div class="contact-methods reveal">
             <a
               class="contact-link"
-              href="https://wa.me/000000000000"
+              href="https://wa.me/255769665240"
               target="_blank"
               rel="noopener"
             >
               <span class="contact-label">WhatsApp</span>
-              <span class="contact-value">Chat with us &rarr;</span>
+              <span class="contact-value">+255 769 665 240 &rarr;</span>
             </a>
-            <a class="contact-link" href="tel:+000000000000">
+            <a class="contact-link" href="tel:+255769665240">
               <span class="contact-label">Call</span>
-              <span class="contact-value">+00 000 000 000</span>
+              <span class="contact-value">+255 769 665 240</span>
             </a>
-            <a class="contact-link" href="mailto:hello@example.com">
+            <a class="contact-link" href="mailto:eliabujohnmpuya@gmail.com">
               <span class="contact-label">Email</span>
-              <span class="contact-value">hello@example.com</span>
+              <span class="contact-value">eliabujohnmpuya@gmail.com</span>
             </a>
+            <!-- INSTAGRAM: replace "momentum" in the href and the @handle below
+                 with your real Instagram username once you have it. -->
             <a
               class="contact-link"
-              href="https://instagram.com/yourhandle"
+              href="https://instagram.com/momentum"
               target="_blank"
               rel="noopener"
             >
               <span class="contact-label">Instagram</span>
-              <span class="contact-value">@yourhandle &rarr;</span>
+              <span class="contact-value">@momentum &rarr;</span>
             </a>
           </div>
 
-          <!-- Simple contact form (front-end only — wire up an action/endpoint later) -->
-          <form class="contact-form reveal" id="contact-form" novalidate>
+          <!-- Contact form — submitted to Formspree (free) via JS in js/main.js.
+               ┌─────────────────────────────────────────────────────────────┐
+               │ PASTE YOUR FORMSPREE ID HERE:                                │
+               │ 1. Create a free form at https://formspree.io               │
+               │ 2. It gives you an endpoint like https://formspree.io/f/abc123 │
+               │ 3. Replace ONLY "YOUR_FORM_ID" in the action below with the  │
+               │    part after /f/  (e.g. action=".../f/abc123")              │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <form
+            class="contact-form reveal"
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate
+          >
             <div class="field">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required autocomplete="name" />
@@ -201,6 +239,13 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+      </nav>
+      <nav class="footer-contact" aria-label="Contact">
+        <a href="https://wa.me/255769665240" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+255769665240">Call</a>
+        <a href="mailto:eliabujohnmpuya@gmail.com">Email</a>
+        <!-- INSTAGRAM: update this href with your real handle (see contact section). -->
+        <a href="https://instagram.com/momentum" target="_blank" rel="noopener">Instagram</a>
       </nav>
       <p class="footer-copy">&copy; <span id="year"></span> Momentum. All rights reserved.</p>
     </div>

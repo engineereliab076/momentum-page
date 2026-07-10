@@ -54,9 +54,11 @@ All colours and fonts are CSS variables in the `:root` block at the top of
 ## Things to fill in before going live
 
 - **Logo** — search `LOGO PLACEHOLDER` in `index.html` and drop in the final asset.
-- **Contact details** — replace the placeholder WhatsApp number, phone, email,
-  and Instagram handle in the Contact section of `index.html`.
-- **Contact form** — currently front-end only (shows a confirmation message).
-  Wire it to a real endpoint (Formspree, Netlify Forms, or your own API).
-  See the note in [`js/main.js`](js/main.js).
+- **Instagram handle** — WhatsApp, phone, and email are set to real details.
+  Instagram is still a placeholder (`@momentum`); search `INSTAGRAM` in
+  `index.html` (contact section + footer) and swap in the real handle.
+- **Formspree form ID** — the contact form POSTs to Formspree but needs your
+  form ID. Search `PASTE YOUR FORMSPREE ID HERE` in `index.html`, create a free
+  form at <https://formspree.io>, and replace `YOUR_FORM_ID` in the form's
+  `action`. Until then, submissions will show an error message.
 - **Copy** — the tagline and About text are placeholder copy; edit to taste.

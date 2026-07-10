@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ---- 3. Contact form ----------------------------------
-     No backend yet — this validates and shows a confirmation.
-     To make it live, set a real `action`/endpoint (e.g.
-     Formspree, Netlify Forms, or your own API) and remove
-     the preventDefault below. */
+  /* ---- 3. Contact form (Formspree) ----------------------
+     Submits to the Formspree endpoint set in the form's
+     `action` attribute (see index.html — paste your form ID
+     there). We POST via fetch so the page never reloads and
+     we can show an inline confirmation. */
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       if (!form.checkValidity()) {
@@ -68,9 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const name = form.elements.name.value.trim();
-      status.textContent = `Thanks, ${name}! We'll be in touch shortly.`;
-      form.reset();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      status.textContent = "Sending…";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          status.textContent = "Thanks — we'll be in touch.";
+          form.reset();
+        } else {
+          // Formspree returns JSON errors (e.g. before the form ID is set up)
+          status.textContent =
+            "Sorry, something went wrong. Please email us directly.";
+        }
+      } catch (err) {
+        status.textContent =
+          "Network error. Please check your connection or email us directly.";
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   }
 
