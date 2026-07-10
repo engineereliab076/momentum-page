@@ -21,16 +21,23 @@ Everything is intentionally separated by concern so it's easy to learn from:
 
 ## Run locally
 
-No build tools needed. Either:
+No build tools are needed, but the site must be served over HTTP. From the
+project directory, run:
 
-- **Open directly** — double-click `index.html`, or
-- **Serve it** (recommended, avoids browser file:// quirks):
+```bash
+python -m http.server 8000
+```
 
-  ```bash
-  # Python 3
-  python -m http.server 8000
-  # then visit http://localhost:8000
-  ```
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Opening `index.html` directly with a `file://` URL is not a supported local
+development method. The hero uses the production-safe root-relative video path
+`/videos/city.mp4`, which resolves against an HTTP site's origin and will not
+reliably resolve when the page is opened directly from the filesystem.
 
 ## Deploy
 
