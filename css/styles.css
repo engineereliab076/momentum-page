@@ -728,37 +728,4 @@ a {
   .scroll-indicator-dot {
     animation: none;
   }
-  /* Hide the moving hero video; fall back to the plain white hero */
-  .hero-video,
-  .hero-overlay {
-    display: none;
-  }
-  /* With the video hidden the hero is white again — restore dark foreground */
-  .hero-wordmark {
-    color: var(--color-text);
-  }
-  .hero-tagline {
-    color: var(--color-muted);
-  }
-  .scroll-indicator {
-    color: var(--color-muted);
-  }
-  .scroll-indicator:hover {
-    color: var(--color-text);
-  }
-  .scroll-indicator-line {
-    background: var(--color-divider-2);
-  }
-  .scroll-indicator-dot {
-    background: var(--color-text);
-  }
-  .hero .btn {
-    background: var(--color-accent);
-    color: var(--color-on-accent);
-    border-color: var(--color-accent);
-  }
-  .hero .btn:hover {
-    background: var(--color-bg);
-    color: var(--color-accent);
-  }
 }
