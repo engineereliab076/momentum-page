@@ -1,10 +1,31 @@
 /* =========================================================
    MOMENTUM — vanilla JS
-   Three small, independent enhancements:
+   Small, independent enhancements:
    1. Scroll-triggered fade-ins (IntersectionObserver)
-   2. Mobile nav toggle
-   3. Contact-form handling (front-end only)
+   2. Contact-form handling + package enquiry prefill
+   3. Footer year
    ========================================================= */
+
+/* Ensure every route mounts the shared navigation, including a stale or
+   future HTML entry point that still contains a page-level legacy header. */
+const mountGlobalNavigation = async () => {
+  if (!customElements.get("momentum-navigation")) {
+    await import("./navigation.js");
+  }
+
+  if (document.querySelector("momentum-navigation")) return;
+
+  const sharedNavigation = document.createElement("momentum-navigation");
+  const legacyHeader = document.querySelector("body > .site-header");
+
+  if (legacyHeader) {
+    legacyHeader.replaceWith(sharedNavigation);
+  } else {
+    document.body.prepend(sharedNavigation);
+  }
+};
+
+mountGlobalNavigation();
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ---- 1. Reveal-on-scroll -------------------------------
@@ -31,46 +52,75 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* ---- 2. Mobile navigation toggle ----------------------- */
-  const nav = document.querySelector(".nav");
-  const toggle = document.querySelector(".nav-toggle");
-
-  if (nav && toggle) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-
-    // Close the menu after tapping a link
-    nav.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  /* ---- 3. Contact form (Formspree) ----------------------
+  /* ---- 2. Contact form + package preselection -----------
      Submits to the Formspree endpoint set in the form's
      `action` attribute (see index.html — paste your form ID
      there). We POST via fetch so the page never reloads and
-     we can show an inline confirmation. */
+     we can show an inline confirmation.
+
+     services.html links here with
+     ?service=…&solution=…&package=…#contact. The matching
+     service option is selected and the package details are
+     kept in dedicated hidden fields, so editing the project
+     message never removes the original selection. */
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
   if (form) {
+    const serviceField = document.getElementById("service");
+    const solutionField = document.getElementById("selected-solution");
+    const packageField = document.getElementById("selected-package");
+    const enquiryContext = document.getElementById("enquiry-context");
+    const enquiryContextValue = document.getElementById("enquiry-context-value");
+    const params = new URLSearchParams(window.location.search);
+
+    const setStatus = (message, state = "") => {
+      status.textContent = message;
+      status.classList.remove("is-error", "is-success");
+      if (state) status.classList.add(`is-${state}`);
+    };
+
+    const applyEnquiryPrefill = () => {
+      const service = params.get("service")?.trim() || "";
+      const solution = params.get("solution")?.trim() || "";
+      const pkg = params.get("package")?.trim() || "";
+
+      if (service && serviceField) {
+        const matchingOption = Array.from(serviceField.options).find(
+          (option) => option.value.toLowerCase() === service.toLowerCase()
+        );
+        if (matchingOption) serviceField.value = matchingOption.value;
+      }
+
+      if (solutionField) solutionField.value = solution;
+      if (packageField) packageField.value = pkg;
+
+      const selectedItem = pkg || solution;
+      if (enquiryContext && enquiryContextValue && selectedItem) {
+        enquiryContextValue.textContent = service
+          ? `${selectedItem} — ${service}`
+          : selectedItem;
+        enquiryContext.hidden = false;
+      }
+    };
+
+    applyEnquiryPrefill();
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       if (!form.checkValidity()) {
-        status.textContent = "Please fill in all fields with a valid email.";
+        setStatus("Please complete the required fields and check your email address.", "error");
         form.reportValidity();
         return;
       }
 
       const submitBtn = form.querySelector('button[type="submit"]');
+      const defaultButtonText = submitBtn.textContent;
       submitBtn.disabled = true;
-      status.textContent = "Sending…";
+      submitBtn.setAttribute("aria-busy", "true");
+      submitBtn.textContent = "Sending enquiry…";
+      setStatus("Sending your enquiry…");
 
       try {
         const response = await fetch(form.action, {
@@ -80,18 +130,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          status.textContent = "Thanks — we'll be in touch.";
           form.reset();
+          applyEnquiryPrefill();
+          setStatus("Thanks — your enquiry has been sent. We'll be in touch.", "success");
         } else {
           // Formspree returns JSON errors (e.g. before the form ID is set up)
-          status.textContent =
-            "Sorry, something went wrong. Please email us directly.";
+          setStatus(
+            "We couldn't send your enquiry. Your details are still here — please try again or email us directly.",
+            "error"
+          );
         }
       } catch (err) {
-        status.textContent =
-          "Network error. Please check your connection or email us directly.";
+        setStatus(
+          "We couldn't connect. Your details are still here — check your connection or email us directly.",
+          "error"
+        );
       } finally {
         submitBtn.disabled = false;
+        submitBtn.removeAttribute("aria-busy");
+        submitBtn.textContent = defaultButtonText;
       }
     });
   }

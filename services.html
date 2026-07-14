@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Momentum</title>
+  <meta
+    name="description"
+    content="Explore Momentum's services and packages: website development, brand identity, AI and business automation, paid advertising, and content production — with timelines and starting prices."
+  />
+
+  <!-- Modern sans-serif font. Swap the family here + the --font-sans variable to rebrand. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/navigation.js" defer></script>
+</head>
+<body>
+  <!-- ===================== HEADER / NAV ===================== -->
+  <momentum-navigation></momentum-navigation>
+
+  <main>
+    <!-- ===================== SERVICES HERO ===================== -->
+    <section class="page-hero" aria-labelledby="services-hero-title">
+      <div class="container page-hero-inner">
+        <p class="eyebrow hero-anim">Services</p>
+        <h1 class="page-hero-title hero-anim" id="services-hero-title">Explore Our Services</h1>
+        <p class="section-lead hero-anim">
+          Choose the solution your business needs and see what is included,
+          how long it takes, and where the investment begins.
+        </p>
+        <a
+          class="btn btn-lg hero-anim"
+          href="https://wa.me/255769665240?text=Hello%20Momentum%2C%20I%27d%20like%20to%20book%20a%20discovery%20call."
+          target="_blank"
+          rel="noopener"
+        >Book a Discovery Call</a>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE EXPLORER =====================
+         Rendered by js/service-explorer.js from js/services-data.js.
+         To add or edit a service, solution, or package, edit the
+         data file only. -->
+    <section class="section" id="explorer">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Service explorer</p>
+          <h2 class="section-title">Choose a Service</h2>
+        </header>
+        <div id="explorer-root" class="reveal">
+          <noscript>
+            <p class="section-lead">
+              Please enable JavaScript to browse our solutions and packages, or
+              <a href="index.html#contact"><strong>contact Momentum</strong></a>
+              for a tailored quotation.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW WE WORK ===================== -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Our process</p>
+          <h2 class="section-title">How We Work</h2>
+        </header>
+
+        <ol class="process-grid">
+          <li class="process-step reveal">
+            <span class="service-index">01</span>
+            <h3>Discovery</h3>
+            <p>We learn about your business, goals, audience, and requirements.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="service-index">02</span>
+            <h3>Proposal</h3>
+            <p>We define the scope, timeline, deliverables, and investment.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="service-index">03</span>
+            <h3>Production</h3>
+            <p>Our team designs, builds, or creates the agreed solution.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="service-index">04</span>
+            <h3>Review</h3>
+            <p>You review the work and provide feedback within the agreed revision rounds.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="service-index">05</span>
+            <h3>Launch</h3>
+            <p>The final solution is approved, delivered, published, or activated.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="service-index">06</span>
+            <h3>Support</h3>
+            <p>We provide the agreed post-launch support and discuss the next stage of growth.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ =====================
+         Filled per selected service category by js/service-explorer.js;
+         hidden when the active category has no questions yet. -->
+    <section class="section" id="faq" hidden>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </header>
+        <div id="faq-root" class="faq-list reveal"></div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="section section-alt" id="start">
+      <div class="container final-cta reveal">
+        <h2 class="section-title">Not sure which solution fits your business?</h2>
+        <p class="section-lead">
+          Tell us about your goals and Momentum will recommend the right service.
+        </p>
+        <a class="btn btn-lg" href="index.html#contact">Start a Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-mark">Momentum</span>
+      <p class="footer-tagline">Marketing &amp; technology studio.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <nav class="footer-contact" aria-label="Contact">
+        <a href="https://wa.me/255769665240" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+255769665240">Call</a>
+        <a href="mailto:eliabujohnmpuya@gmail.com">Email</a>
+        <!-- INSTAGRAM: update this href with your real handle (see index.html). -->
+        <a href="https://instagram.com/momentum" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> Momentum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/services-data.js"></script>
+  <script src="js/service-explorer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
