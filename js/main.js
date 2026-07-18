@@ -80,8 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (state) status.classList.add(`is-${state}`);
     };
 
+    /* Former top-level services now live under Marketing & Advertising.
+       Old enquiry links keep working: the service is remapped while the
+       selected solution and package are preserved as-is. */
+    const legacyServiceMap = {
+      "brand identity": "Marketing & Advertising",
+      "paid advertising": "Marketing & Advertising",
+      "content production": "Marketing & Advertising",
+    };
+
     const applyEnquiryPrefill = () => {
-      const service = params.get("service")?.trim() || "";
+      const requested = params.get("service")?.trim() || "";
+      const service = legacyServiceMap[requested.toLowerCase()] || requested;
       const solution = params.get("solution")?.trim() || "";
       const pkg = params.get("package")?.trim() || "";
 

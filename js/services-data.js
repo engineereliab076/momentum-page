@@ -25,7 +25,7 @@
      exclusions[], addOns: [{ name, price }]
    }
 
-   Note: the five category descriptions also appear as static
+   Note: the three category descriptions also appear as static
    copy in the homepage services overview (index.html).
    ========================================================= */
 
@@ -562,454 +562,6 @@ const MOMENTUM_SERVICES = [
     ],
   },
   {
-    id: "brand-identity",
-    name: "Brand Identity",
-    description:
-      "Strategic visual identities that help businesses look consistent, recognizable, and credible.",
-    solutions: [
-      {
-        id: "logo-design",
-        name: "Logo Design",
-        availability: "complete",
-        packageName: "Momentum Logo Design",
-        startingPrice: "Starting from TZS 350,000",
-        description:
-          "A distinctive, professionally crafted logo that gives your business a clear and memorable visual identity, delivered in every format you need for print and digital use.",
-        bestFor: [
-          "Startups",
-          "Small businesses",
-          "Personal brands",
-          "New organizations",
-          "Product launches",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 350,000" },
-          { label: "Timeline", value: "5–7 business days" },
-          { label: "Concepts", value: "3 initial directions" },
-          { label: "Revisions", value: "2 rounds included" },
-        ],
-        included: [
-          {
-            title: "Discovery & concepts",
-            items: [
-              "Discovery session covering your business, audience, and competitors",
-              "Three initial logo concepts",
-              "Concept presentation with design rationale",
-              "Two refinement rounds on the chosen concept",
-            ],
-          },
-          {
-            title: "Final logo package",
-            items: [
-              "Primary logo",
-              "Horizontal and stacked variations",
-              "Full-color, monochrome, and reversed versions",
-              "Vector source files (AI, EPS, SVG)",
-              "High-resolution PNG files with transparent backgrounds",
-              "Print-ready PDF",
-            ],
-          },
-          {
-            title: "Usage guidance",
-            items: [
-              "One-page usage sheet covering clear space, minimum size, and color values",
-              "File naming and format guide so you always know which file to use where",
-            ],
-          },
-        ],
-        timeline: "5–7 business days",
-        timelineNote:
-          "The timeline begins after the deposit has been received and the discovery session is complete.",
-        paymentTerms: [
-          "60% deposit before work begins",
-          "40% before final files are delivered",
-        ],
-        exclusions: [
-          "Full brand guidelines document",
-          "Stationery and business card design",
-          "Social media templates",
-          "Trademark registration and legal searches",
-          "Unlimited concepts or revisions",
-        ],
-        addOns: [
-          { name: "Additional logo concept", price: "TZS 100,000" },
-          { name: "Additional revision round", price: "TZS 75,000" },
-          { name: "Business card design", price: "TZS 100,000" },
-          { name: "Social profile assets", price: "TZS 100,000" },
-          { name: "Animated logo for video and social", price: "From TZS 250,000" },
-          { name: "Urgent 3-day delivery", price: "Additional 30%" },
-        ],
-      },
-      {
-        id: "brand-starter-kit",
-        name: "Brand Starter Kit",
-        availability: "complete",
-        packageName: "Momentum Brand Starter Kit",
-        startingPrice: "Starting from TZS 850,000",
-        description:
-          "The essential identity package for a professional launch — a logo, core visual system, and the everyday assets your business needs to look consistent from day one.",
-        bestFor: [
-          "Small companies",
-          "NGOs",
-          "Restaurants",
-          "Retail businesses",
-          "Professional services",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 850,000" },
-          { label: "Timeline", value: "7–10 business days" },
-          { label: "Revisions", value: "2 rounds included" },
-          { label: "Formats", value: "Print & digital files" },
-        ],
-        included: [
-          {
-            title: "Logo & core identity",
-            items: [
-              "Discovery session covering your business, audience, and competitors",
-              "Logo design with three initial concepts",
-              "Full-color, monochrome, and reversed logo versions",
-              "Vector source files (AI, EPS, SVG) and high-resolution PNG files",
-              "Typography selection with primary and secondary typefaces",
-              "Color palette with print and digital color values",
-            ],
-          },
-          {
-            title: "Brand rules",
-            items: [
-              "Concise brand sheet covering logo usage, clear space, colors, and typography",
-              "Do-and-don't examples for everyday use",
-            ],
-          },
-          {
-            title: "Business essentials",
-            items: [
-              "Business card design (print-ready)",
-              "Letterhead design",
-              "Email signature design",
-              "Social media profile assets (profile image and cover for your key platforms)",
-            ],
-          },
-        ],
-        timeline: "7–10 business days",
-        timelineNote:
-          "The timeline begins after the deposit has been received and the discovery session is complete.",
-        paymentTerms: [
-          "60% deposit before work begins",
-          "40% before final files are delivered",
-        ],
-        exclusions: [
-          "Full brand strategy and positioning work",
-          "Comprehensive brand guidelines document",
-          "Social media content templates",
-          "Packaging and signage design",
-          "Printing costs",
-          "Trademark registration",
-        ],
-        addOns: [
-          { name: "Additional stationery items", price: "From TZS 75,000 per item" },
-          { name: "Social media post templates", price: "From TZS 200,000" },
-          { name: "Company profile design", price: "From TZS 300,000" },
-          { name: "Additional revision round", price: "TZS 100,000" },
-          { name: "Print management", price: "Quoted on request" },
-        ],
-      },
-      {
-        id: "complete-brand-identity",
-        name: "Complete Brand Identity",
-        availability: "complete",
-        packageName: "Momentum Complete Brand Identity",
-        startingPrice: "Starting from TZS 2,000,000",
-        description:
-          "Our flagship branding package — a complete identity built on strategy, from positioning and personality through to a full visual system, templates, and a professional brand guideline document.",
-        bestFor: [
-          "Growing companies",
-          "Organizations",
-          "Government projects",
-          "Technology companies",
-          "Professional firms",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 2,000,000" },
-          { label: "Timeline", value: "15–25 business days" },
-          { label: "Revisions", value: "3 rounds included" },
-          { label: "Guidelines", value: "Full document included" },
-        ],
-        included: [
-          {
-            title: "Brand strategy",
-            items: [
-              "Discovery workshop with your team",
-              "Mission and vision refinement",
-              "Brand personality and tone of voice definition",
-              "Audience and competitor review",
-              "Positioning statement",
-            ],
-          },
-          {
-            title: "Visual identity system",
-            items: [
-              "Logo system with primary logo, secondary marks, and icon",
-              "Full-color, monochrome, and reversed versions in all formats",
-              "Typography system with primary and secondary typefaces",
-              "Color system with primary, secondary, and functional palettes",
-              "Iconography style and starter icon set",
-              "Photography and imagery direction",
-            ],
-          },
-          {
-            title: "Brand applications",
-            items: [
-              "Business card, letterhead, and email signature",
-              "Social media profile assets",
-              "Social media post template set",
-              "Presentation template",
-              "Two additional applications relevant to your business (e.g. ID card, folder, invoice, signage concept)",
-            ],
-          },
-          {
-            title: "Brand guidelines",
-            items: [
-              "Comprehensive brand guideline document covering strategy, logo usage, typography, color, imagery, and applications",
-              "Organized file library with all assets in print and digital formats",
-              "Handover session walking your team through the identity",
-            ],
-          },
-        ],
-        timeline: "15–25 business days",
-        timelineNote:
-          "The timeline begins after the deposit has been received and the discovery workshop is complete.",
-        paymentTerms: [
-          "50% deposit before work begins",
-          "30% on approval of the visual identity",
-          "20% before final files are delivered",
-        ],
-        exclusions: [
-          "Website design and development",
-          "Ongoing social media content production",
-          "Commissioned photography and video",
-          "Printing and production costs",
-          "Trademark registration and legal searches",
-          "Advertising campaigns",
-        ],
-        addOns: [
-          { name: "Additional brand applications", price: "From TZS 100,000 per item" },
-          { name: "Brand naming and tagline development", price: "From TZS 500,000" },
-          { name: "Animated logo and motion assets", price: "From TZS 350,000" },
-          { name: "Website design and development", price: "From TZS 1,500,000" },
-          { name: "Brand photography direction on set", price: "Quoted on request" },
-        ],
-      },
-      {
-        id: "rebranding",
-        name: "Rebranding",
-        availability: "complete",
-        packageName: "Momentum Rebranding",
-        startingPrice: "Starting from TZS 1,500,000",
-        description:
-          "A structured evolution of your existing brand — modernizing how you look and communicate while protecting the recognition and trust you have already built.",
-        bestFor: [
-          "Businesses changing direction",
-          "Growing companies",
-          "Organizations with outdated branding",
-          "Businesses after a merger or restructure",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 1,500,000" },
-          { label: "Timeline", value: "15–20 business days" },
-          { label: "Revisions", value: "3 rounds included" },
-          { label: "Includes", value: "Audit & migration plan" },
-        ],
-        included: [
-          {
-            title: "Audit & direction",
-            items: [
-              "Brand audit of your current identity, materials, and touchpoints",
-              "Competitive review of how you compare in your market",
-              "Rebrand direction recommendation — refresh or full redesign",
-              "Definition of which brand equity to preserve",
-            ],
-          },
-          {
-            title: "Identity evolution",
-            items: [
-              "Evolved logo system with three directions",
-              "Updated typography and color system",
-              "Full-color, monochrome, and reversed versions in all formats",
-              "Refreshed imagery and visual style direction",
-            ],
-          },
-          {
-            title: "Updated applications",
-            items: [
-              "Business card, letterhead, and email signature",
-              "Social media profile assets",
-              "Updated brand sheet covering the evolved identity",
-            ],
-          },
-          {
-            title: "Migration & launch",
-            items: [
-              "Migration checklist covering where and in what order to update your brand",
-              "Side-by-side comparison of old and new identity for internal alignment",
-              "Launch recommendations for announcing the rebrand to your audience",
-            ],
-          },
-        ],
-        timeline: "15–20 business days",
-        timelineNote:
-          "The timeline begins after the deposit has been received and access to your existing brand materials has been provided.",
-        paymentTerms: [
-          "50% deposit before work begins",
-          "30% on approval of the evolved identity",
-          "20% before final files are delivered",
-        ],
-        exclusions: [
-          "Full brand strategy and repositioning work",
-          "Comprehensive brand guidelines document",
-          "Website redesign",
-          "Reprinting and production costs",
-          "Signage fabrication",
-          "Trademark registration",
-        ],
-        addOns: [
-          { name: "Comprehensive brand guidelines document", price: "From TZS 500,000" },
-          { name: "Website redesign", price: "From TZS 900,000" },
-          { name: "Additional application updates", price: "From TZS 100,000 per item" },
-          { name: "Rebrand announcement content", price: "Quoted on request" },
-          { name: "Print management", price: "Quoted on request" },
-        ],
-      },
-      {
-        id: "brand-guidelines",
-        name: "Brand Guidelines",
-        availability: "complete",
-        packageName: "Momentum Brand Guidelines",
-        startingPrice: "Starting from TZS 500,000",
-        description:
-          "A clear, professional guideline document that defines exactly how your brand should be used, so every designer, printer, and team member applies it consistently.",
-        bestFor: [
-          "Businesses with an existing logo",
-          "Growing teams",
-          "Organizations working with multiple vendors",
-          "Franchises and branches",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 500,000" },
-          { label: "Timeline", value: "7–10 business days" },
-          { label: "Revisions", value: "2 rounds included" },
-          { label: "Format", value: "Print & digital PDF" },
-        ],
-        included: [
-          {
-            title: "Logo standards",
-            items: [
-              "Logo versions and when to use each",
-              "Clear space and minimum size rules",
-              "Placement guidance",
-              "Incorrect usage examples",
-            ],
-          },
-          {
-            title: "Visual system",
-            items: [
-              "Typography rules with typefaces, weights, and hierarchy",
-              "Color specifications with print and digital values (CMYK, RGB, HEX)",
-              "Imagery and photography guidance",
-            ],
-          },
-          {
-            title: "Applications",
-            items: [
-              "Digital usage guidance for web, social media, and presentations",
-              "Print usage guidance for stationery and marketing materials",
-              "Real application examples using your existing materials",
-            ],
-          },
-          {
-            title: "Delivery",
-            items: [
-              "Professionally designed guideline document as a digital and print-ready PDF",
-              "Organized logo and asset files referenced by the document",
-            ],
-          },
-        ],
-        timeline: "7–10 business days",
-        timelineNote:
-          "The timeline begins after the deposit has been received along with your existing logo files and brand materials.",
-        paymentTerms: [
-          "60% deposit before work begins",
-          "40% before the final document is delivered",
-        ],
-        exclusions: [
-          "Logo design or redesign",
-          "New brand applications (stationery, templates)",
-          "Brand strategy and positioning work",
-          "Copywriting beyond the guideline content",
-          "Printing costs",
-        ],
-        addOns: [
-          { name: "Logo refinement before documentation", price: "From TZS 150,000" },
-          { name: "Tone of voice section", price: "From TZS 150,000" },
-          { name: "Stationery design added to the document", price: "From TZS 200,000" },
-          { name: "Editable working files", price: "Quoted on request" },
-          { name: "Annual guideline update", price: "Quoted on request" },
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: "Will I own the logo?",
-        answer:
-          "Yes. Once the project is fully paid, full ownership of the final logo and brand assets transfers to you. Momentum retains the right to display the work in its portfolio unless agreed otherwise.",
-      },
-      {
-        question: "Which file formats are delivered?",
-        answer:
-          "Every logo package includes vector source files (AI, EPS, SVG) for professional printing and signage, high-resolution PNG files with transparent backgrounds for everyday digital use, and a print-ready PDF.",
-      },
-      {
-        question: "How many revisions are included?",
-        answer:
-          "Each package includes a defined number of revision rounds — two for Logo Design, Brand Starter Kit, and Brand Guidelines, and three for Complete Brand Identity and Rebranding. Additional rounds are available as an add-on.",
-      },
-      {
-        question: "Can you redesign my existing logo?",
-        answer:
-          "Yes. The Rebranding package evolves an existing identity while preserving the recognition you have built. If you only need the logo modernized without the wider brand work, contact Momentum for a tailored quotation.",
-      },
-      {
-        question: "Why do I need brand guidelines?",
-        answer:
-          "Guidelines keep your brand consistent as more people work with it. When designers, printers, and staff all follow the same rules for logo usage, colors, and typography, your business looks professional everywhere it appears — and you avoid costly reprints caused by inconsistent files.",
-      },
-      {
-        question: "Can you design business cards and stationery?",
-        answer:
-          "Yes. Business cards, letterheads, and email signatures are included in the Brand Starter Kit, Complete Brand Identity, and Rebranding packages, and are available as an add-on to Logo Design.",
-      },
-      {
-        question: "Can you create social media templates?",
-        answer:
-          "Yes. Social media post templates are included in the Complete Brand Identity package and available as an add-on to the Brand Starter Kit. All packages include social profile assets sized for your key platforms.",
-      },
-      {
-        question: "Do you handle printing?",
-        answer:
-          "All designs are delivered print-ready. Printing itself is not included, but Momentum can manage the printing process with trusted vendors as an add-on service.",
-      },
-      {
-        question: "What do you need from me to start?",
-        answer:
-          "Your business information, any existing brand materials, examples of identities you like, and the deposit. Every branding project starts with a discovery session where we gather everything else we need.",
-      },
-      {
-        question: "Can I start with a logo and expand later?",
-        answer:
-          "Yes. Many clients begin with Logo Design and later add stationery, templates, or full guidelines. The visual foundation carries forward, so earlier work is never wasted.",
-      },
-    ],
-  },
-  {
     id: "ai-business-automation",
     name: "AI & Business Automation",
     description:
@@ -1425,429 +977,399 @@ const MOMENTUM_SERVICES = [
     ],
   },
   {
-    id: "paid-advertising",
-    name: "Paid Advertising",
+    id: "marketing-advertising",
+    name: "Marketing & Advertising",
     description:
-      "Targeted advertising campaigns designed to reach the right audience and generate measurable business results.",
+      "Integrated marketing services that help businesses build their brand, create compelling content, reach the right audience, and generate measurable growth.",
     solutions: [
       {
-        id: "campaign-setup",
-        name: "Campaign Setup",
+        id: "logo-design",
+        name: "Logo Design",
         availability: "complete",
-        packageName: "Momentum Campaign Setup",
-        startingPrice: "Starting from TZS 450,000",
+        packageName: "Momentum Logo Design",
+        startingPrice: "Starting from TZS 350,000",
         description:
-          "A professionally configured advertising campaign on Meta or Google for businesses starting with paid advertising — researched, structured, tracked, and launched correctly from day one.",
+          "A distinctive, professionally crafted logo that gives your business a clear and memorable visual identity, delivered in every format you need for print and digital use.",
         bestFor: [
-          "Small businesses",
           "Startups",
-          "Restaurants",
-          "Hotels",
-          "NGOs",
-          "Professional firms",
-          "Local businesses",
+          "Small businesses",
+          "Personal brands",
+          "New organizations",
+          "Product launches",
         ],
         highlights: [
-          { label: "Starting from", value: "TZS 450,000" },
+          { label: "Starting from", value: "TZS 350,000" },
           { label: "Timeline", value: "5–7 business days" },
-          { label: "Platform", value: "Meta or Google" },
-          { label: "Support", value: "7 days post-launch" },
+          { label: "Concepts", value: "3 initial directions" },
+          { label: "Revisions", value: "2 rounds included" },
         ],
         included: [
           {
-            title: "Research & planning",
+            title: "Discovery & concepts",
             items: [
-              "Discovery session covering your goals, offer, and budget",
-              "Audience research for your market",
-              "Campaign plan with objective, targeting, and budget structure",
+              "Discovery session covering your business, audience, and competitors",
+              "Three initial logo concepts",
+              "Concept presentation with design rationale",
+              "Two refinement rounds on the chosen concept",
             ],
           },
           {
-            title: "Account & tracking setup",
+            title: "Final logo package",
             items: [
-              "Ad account review and configuration",
-              "Pixel or tracking tag setup where applicable",
-              "Campaign, ad set, and ad configuration on one platform",
+              "Primary logo",
+              "Horizontal and stacked variations",
+              "Full-color, monochrome, and reversed versions",
+              "Vector source files (AI, EPS, SVG)",
+              "High-resolution PNG files with transparent backgrounds",
+              "Print-ready PDF",
             ],
           },
           {
-            title: "Launch & handover",
+            title: "Usage guidance",
             items: [
-              "Campaign launch support",
-              "Basic performance report after the first week",
-              "Walkthrough of how the campaign is structured",
-              "Seven days of post-launch support",
+              "One-page usage sheet covering clear space, minimum size, and color values",
+              "File naming and format guide so you always know which file to use where",
             ],
           },
         ],
         timeline: "5–7 business days",
         timelineNote:
-          "The timeline begins after the deposit, ad account access, and campaign materials have been received.",
+          "The timeline begins after the deposit has been received and the discovery session is complete.",
         paymentTerms: [
           "60% deposit before work begins",
-          "40% before the campaign launches",
+          "40% before final files are delivered",
         ],
         exclusions: [
-          "The advertising budget paid to Meta or Google",
-          "Ongoing campaign management after launch",
-          "Ad creative design and video production",
-          "Landing page design and development",
-          "Multiple platforms in one setup",
-          "Copywriting beyond the ad text",
+          "Full brand guidelines document",
+          "Stationery and business card design",
+          "Social media templates",
+          "Trademark registration and legal searches",
+          "Unlimited concepts or revisions",
         ],
         addOns: [
-          { name: "Second platform setup", price: "From TZS 300,000" },
-          { name: "Ad creative design", price: "From TZS 150,000" },
-          { name: "Campaign landing page", price: "From TZS 550,000" },
-          { name: "One month of campaign management", price: "From TZS 800,000" },
-          { name: "Urgent 2–3 day setup", price: "Additional 30%" },
+          { name: "Additional logo concept", price: "TZS 100,000" },
+          { name: "Additional revision round", price: "TZS 75,000" },
+          { name: "Business card design", price: "TZS 100,000" },
+          { name: "Social profile assets", price: "TZS 100,000" },
+          { name: "Animated logo for video and social", price: "From TZS 250,000" },
+          { name: "Urgent 3-day delivery", price: "Additional 30%" },
         ],
       },
       {
-        id: "social-media-advertising",
-        name: "Social Media Advertising",
+        id: "brand-starter-kit",
+        name: "Brand Starter Kit",
         availability: "complete",
-        packageName: "Momentum Social Media Advertising",
-        startingPrice: "Starting from TZS 800,000 / month",
+        packageName: "Momentum Brand Starter Kit",
+        startingPrice: "Starting from TZS 850,000",
         description:
-          "Professional monthly management of paid advertising across Meta platforms, including Facebook and Instagram — planned, monitored, and optimized so your budget works harder every month.",
+          "The essential identity package for a professional launch — a logo, core visual system, and the everyday assets your business needs to look consistent from day one.",
         bestFor: [
-          "Retail businesses",
+          "Small companies",
+          "NGOs",
           "Restaurants",
-          "Hotels",
-          "Personal brands",
-          "E-commerce",
-          "NGOs",
+          "Retail businesses",
+          "Professional services",
         ],
         highlights: [
-          { label: "Starting from", value: "TZS 800,000 / month" },
-          { label: "Timeline", value: "Monthly service" },
-          { label: "Platforms", value: "Facebook & Instagram" },
-          { label: "Reporting", value: "Monthly report" },
-        ],
-        included: [
-          {
-            title: "Campaign management",
-            items: [
-              "Monthly campaign planning aligned to your goals and promotions",
-              "Campaign and ad set management across Facebook and Instagram",
-              "Budget management and pacing throughout the month",
-            ],
-          },
-          {
-            title: "Optimization",
-            items: [
-              "Audience testing and optimization",
-              "Ad creative recommendations based on performance",
-              "Continuous optimization of targeting, placements, and bids",
-            ],
-          },
-          {
-            title: "Monitoring & reporting",
-            items: [
-              "Ongoing performance monitoring",
-              "Monthly performance report in plain language",
-              "Monthly review call to plan the next cycle",
-            ],
-          },
-        ],
-        timeline: "Monthly service",
-        timelineNote:
-          "Management begins once the first monthly payment has been received and ad account access has been provided. Existing campaigns are reviewed in the first week.",
-        paymentTerms: [
-          "Billed monthly in advance",
-          "The advertising budget is paid directly to Meta and agreed separately",
-        ],
-        exclusions: [
-          "The advertising budget paid to Meta",
-          "Ad creative design and video production",
-          "Organic content creation and posting",
-          "Community management and comment replies",
-          "Landing page design and development",
-          "Platforms outside Meta",
-        ],
-        addOns: [
-          { name: "Ad creative design", price: "From TZS 150,000 / month" },
-          { name: "Short video ads", price: "From TZS 100,000 per video" },
-          { name: "Google Ads management", price: "From TZS 900,000 / month" },
-          { name: "Campaign landing page", price: "From TZS 550,000" },
-          { name: "Monthly social media content", price: "From TZS 600,000 / month" },
-        ],
-      },
-      {
-        id: "google-ads-management",
-        name: "Google Ads Management",
-        availability: "complete",
-        packageName: "Momentum Google Ads Management",
-        startingPrice: "Starting from TZS 900,000 / month",
-        description:
-          "Professional Google Ads management focused on reaching customers at the moment they are actively searching for your products and services.",
-        bestFor: [
-          "Service businesses",
-          "Professional firms",
-          "Local businesses",
-          "Healthcare",
-          "Education",
-          "Technology companies",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 900,000 / month" },
-          { label: "Timeline", value: "Monthly service" },
-          { label: "Focus", value: "Search campaigns" },
-          { label: "Reporting", value: "Monthly report" },
-        ],
-        included: [
-          {
-            title: "Setup & structure",
-            items: [
-              "Keyword research for your services and market",
-              "Campaign setup with structured ad groups",
-              "Search campaigns targeting high-intent queries",
-              "Conversion tracking setup",
-            ],
-          },
-          {
-            title: "Ongoing management",
-            items: [
-              "Bid and budget management throughout the month",
-              "Negative keyword management to cut wasted spend",
-              "Ad copy testing and refinement",
-              "Continuous optimization based on performance data",
-            ],
-          },
-          {
-            title: "Reporting & guidance",
-            items: [
-              "Monthly performance report in plain language",
-              "Budget recommendations based on results",
-              "Monthly review call to plan the next cycle",
-            ],
-          },
-        ],
-        timeline: "Monthly service",
-        timelineNote:
-          "Management begins once the first monthly payment has been received and ad account access has been provided. New accounts are typically live within the first week.",
-        paymentTerms: [
-          "Billed monthly in advance",
-          "The advertising budget is paid directly to Google and agreed separately",
-        ],
-        exclusions: [
-          "The advertising budget paid to Google",
-          "Landing page design and development",
-          "Display banner and video ad production",
-          "SEO and organic search work",
-          "Google Business Profile management",
-          "Platforms outside Google Ads",
-        ],
-        addOns: [
-          { name: "Display or YouTube campaigns", price: "Quoted on request" },
-          { name: "Campaign landing page", price: "From TZS 550,000" },
-          { name: "Display banner design", price: "From TZS 150,000" },
-          { name: "Social media advertising", price: "From TZS 800,000 / month" },
-          { name: "Additional conversion tracking setup", price: "Quoted on request" },
-        ],
-      },
-      {
-        id: "lead-generation-campaigns",
-        name: "Lead Generation Campaigns",
-        availability: "complete",
-        packageName: "Momentum Lead Generation Campaign",
-        startingPrice: "Starting from TZS 1,200,000",
-        description:
-          "An advertising campaign built specifically to generate qualified enquiries, bookings, or customer leads — planned, launched, and managed through a full campaign cycle.",
-        bestFor: [
-          "Real estate",
-          "Education",
-          "Healthcare",
-          "Consulting",
-          "NGOs",
-          "Financial services",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 1,200,000" },
-          { label: "Launch", value: "7–10 business days" },
-          { label: "Management", value: "30-day campaign cycle" },
-          { label: "Reporting", value: "Weekly lead summary" },
-        ],
-        included: [
-          {
-            title: "Planning & targeting",
-            items: [
-              "Campaign planning session covering your offer and lead goals",
-              "Audience targeting built around your ideal customer",
-              "Landing page recommendations, or lead forms built on the ad platform",
-            ],
-          },
-          {
-            title: "Launch & management",
-            items: [
-              "Lead form setup and testing before launch",
-              "Campaign launch on the agreed platform",
-              "Optimization of targeting, creative, and budget across the 30-day cycle",
-            ],
-          },
-          {
-            title: "Leads & reporting",
-            items: [
-              "Weekly lead delivery and performance summary",
-              "Lead quality review midway through the campaign",
-              "End-of-campaign review with results and recommendations",
-            ],
-          },
-        ],
-        timeline: "7–10 business days to launch, then a 30-day campaign cycle",
-        timelineNote:
-          "The timeline begins after the deposit, ad account access, and campaign materials have been received.",
-        paymentTerms: [
-          "60% deposit before work begins",
-          "40% before the campaign launches",
-          "The advertising budget is paid directly to the platform and agreed separately",
-        ],
-        exclusions: [
-          "The advertising budget paid to the platform",
-          "Landing page design and development",
-          "Ad creative design and video production",
-          "CRM setup and lead follow-up on your behalf",
-          "A guaranteed number or cost of leads",
-          "Management beyond the 30-day cycle",
-        ],
-        addOns: [
-          { name: "Campaign landing page", price: "From TZS 550,000" },
-          { name: "Ad creative design", price: "From TZS 150,000" },
-          { name: "Additional 30-day campaign cycle", price: "From TZS 800,000" },
-          { name: "Second platform", price: "Quoted on request" },
-          { name: "Lead handover automation (email or sheet)", price: "Quoted on request" },
-        ],
-      },
-      {
-        id: "marketing-strategy-consulting",
-        name: "Marketing Strategy & Consulting",
-        availability: "complete",
-        packageName: "Momentum Marketing Strategy",
-        startingPrice: "Starting from TZS 700,000",
-        description:
-          "Strategic consulting that gives you a clear, practical plan — where to advertise, how to allocate your budget, and how to improve marketing performance before you spend more.",
-        bestFor: [
-          "Growing businesses",
-          "Organizations",
-          "Companies launching products",
-          "Businesses entering new markets",
-        ],
-        highlights: [
-          { label: "Starting from", value: "TZS 700,000" },
+          { label: "Starting from", value: "TZS 850,000" },
           { label: "Timeline", value: "7–10 business days" },
-          { label: "Deliverable", value: "Strategy document" },
-          { label: "Handover", value: "Presentation session" },
+          { label: "Revisions", value: "2 rounds included" },
+          { label: "Formats", value: "Print & digital files" },
         ],
         included: [
           {
-            title: "Discovery & review",
+            title: "Logo & core identity",
             items: [
-              "Discovery workshop with your team",
-              "Review of your current marketing channels and results",
-              "Competitor analysis for your market",
+              "Discovery session covering your business, audience, and competitors",
+              "Logo design with three initial concepts",
+              "Full-color, monochrome, and reversed logo versions",
+              "Vector source files (AI, EPS, SVG) and high-resolution PNG files",
+              "Typography selection with primary and secondary typefaces",
+              "Color palette with print and digital color values",
             ],
           },
           {
-            title: "Strategy",
+            title: "Brand rules",
             items: [
-              "Target audience definition",
-              "Channel recommendations with reasoning for each",
-              "Campaign roadmap for the next three to six months",
-              "Budget recommendations by channel",
+              "Concise brand sheet covering logo usage, clear space, colors, and typography",
+              "Do-and-don't examples for everyday use",
             ],
           },
           {
-            title: "Delivery",
+            title: "Business essentials",
             items: [
-              "Written strategy document you keep and act on",
-              "Strategy presentation session with your team",
-              "Two weeks of follow-up questions by email or WhatsApp",
+              "Business card design (print-ready)",
+              "Letterhead design",
+              "Email signature design",
+              "Social media profile assets (profile image and cover for your key platforms)",
             ],
           },
         ],
         timeline: "7–10 business days",
         timelineNote:
-          "The timeline begins after the deposit has been received and the discovery workshop is complete.",
+          "The timeline begins after the deposit has been received and the discovery session is complete.",
         paymentTerms: [
           "60% deposit before work begins",
-          "40% before the strategy is delivered",
+          "40% before final files are delivered",
         ],
         exclusions: [
-          "Campaign setup and execution",
-          "Ongoing campaign management",
-          "The advertising budget itself",
-          "Ad creative and content production",
-          "Brand strategy and identity work",
-          "Implementation beyond the strategy document",
+          "Full brand strategy and positioning work",
+          "Comprehensive brand guidelines document",
+          "Social media content templates",
+          "Packaging and signage design",
+          "Printing costs",
+          "Trademark registration",
         ],
         addOns: [
-          { name: "Campaign setup based on the strategy", price: "From TZS 450,000" },
-          { name: "Monthly campaign management", price: "From TZS 800,000 / month" },
-          { name: "Quarterly strategy review", price: "From TZS 300,000" },
-          { name: "Extended implementation support", price: "Quoted on request" },
+          { name: "Additional stationery items", price: "From TZS 75,000 per item" },
+          { name: "Social media post templates", price: "From TZS 200,000" },
+          { name: "Company profile design", price: "From TZS 300,000" },
+          { name: "Additional revision round", price: "TZS 100,000" },
+          { name: "Print management", price: "Quoted on request" },
         ],
       },
-    ],
-    faqs: [
       {
-        question: "Do advertising costs include the ad budget?",
-        answer:
-          "No. Momentum's fees cover strategy, setup, management, and reporting. The advertising budget — the money spent on ads — is paid by you directly to Meta or Google, so you always control and see exactly what is spent.",
+        id: "complete-brand-identity",
+        name: "Complete Brand Identity",
+        availability: "complete",
+        packageName: "Momentum Complete Brand Identity",
+        startingPrice: "Starting from TZS 2,000,000",
+        description:
+          "Our flagship branding package — a complete identity built on strategy, from positioning and personality through to a full visual system, templates, and a professional brand guideline document.",
+        bestFor: [
+          "Growing companies",
+          "Organizations",
+          "Government projects",
+          "Technology companies",
+          "Professional firms",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 2,000,000" },
+          { label: "Timeline", value: "15–25 business days" },
+          { label: "Revisions", value: "3 rounds included" },
+          { label: "Guidelines", value: "Full document included" },
+        ],
+        included: [
+          {
+            title: "Brand strategy",
+            items: [
+              "Discovery workshop with your team",
+              "Mission and vision refinement",
+              "Brand personality and tone of voice definition",
+              "Audience and competitor review",
+              "Positioning statement",
+            ],
+          },
+          {
+            title: "Visual identity system",
+            items: [
+              "Logo system with primary logo, secondary marks, and icon",
+              "Full-color, monochrome, and reversed versions in all formats",
+              "Typography system with primary and secondary typefaces",
+              "Color system with primary, secondary, and functional palettes",
+              "Iconography style and starter icon set",
+              "Photography and imagery direction",
+            ],
+          },
+          {
+            title: "Brand applications",
+            items: [
+              "Business card, letterhead, and email signature",
+              "Social media profile assets",
+              "Social media post template set",
+              "Presentation template",
+              "Two additional applications relevant to your business (e.g. ID card, folder, invoice, signage concept)",
+            ],
+          },
+          {
+            title: "Brand guidelines",
+            items: [
+              "Comprehensive brand guideline document covering strategy, logo usage, typography, color, imagery, and applications",
+              "Organized file library with all assets in print and digital formats",
+              "Handover session walking your team through the identity",
+            ],
+          },
+        ],
+        timeline: "15–25 business days",
+        timelineNote:
+          "The timeline begins after the deposit has been received and the discovery workshop is complete.",
+        paymentTerms: [
+          "50% deposit before work begins",
+          "30% on approval of the visual identity",
+          "20% before final files are delivered",
+        ],
+        exclusions: [
+          "Website design and development",
+          "Ongoing social media content production",
+          "Commissioned photography and video",
+          "Printing and production costs",
+          "Trademark registration and legal searches",
+          "Advertising campaigns",
+        ],
+        addOns: [
+          { name: "Additional brand applications", price: "From TZS 100,000 per item" },
+          { name: "Brand naming and tagline development", price: "From TZS 500,000" },
+          { name: "Animated logo and motion assets", price: "From TZS 350,000" },
+          { name: "Website design and development", price: "From TZS 1,500,000" },
+          { name: "Brand photography direction on set", price: "Quoted on request" },
+        ],
       },
       {
-        question: "How much should I spend on ads?",
-        answer:
-          "It depends on your goals, market, and competition. Most small businesses start with TZS 300,000 to 1,000,000 per month in ad budget and adjust based on results. Every engagement starts with a budget recommendation matched to your objectives, and you never spend more than you approve.",
+        id: "rebranding",
+        name: "Rebranding",
+        availability: "complete",
+        packageName: "Momentum Rebranding",
+        startingPrice: "Starting from TZS 1,500,000",
+        description:
+          "A structured evolution of your existing brand — modernizing how you look and communicate while protecting the recognition and trust you have already built.",
+        bestFor: [
+          "Businesses changing direction",
+          "Growing companies",
+          "Organizations with outdated branding",
+          "Businesses after a merger or restructure",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 1,500,000" },
+          { label: "Timeline", value: "15–20 business days" },
+          { label: "Revisions", value: "3 rounds included" },
+          { label: "Includes", value: "Audit & migration plan" },
+        ],
+        included: [
+          {
+            title: "Audit & direction",
+            items: [
+              "Brand audit of your current identity, materials, and touchpoints",
+              "Competitive review of how you compare in your market",
+              "Rebrand direction recommendation — refresh or full redesign",
+              "Definition of which brand equity to preserve",
+            ],
+          },
+          {
+            title: "Identity evolution",
+            items: [
+              "Evolved logo system with three directions",
+              "Updated typography and color system",
+              "Full-color, monochrome, and reversed versions in all formats",
+              "Refreshed imagery and visual style direction",
+            ],
+          },
+          {
+            title: "Updated applications",
+            items: [
+              "Business card, letterhead, and email signature",
+              "Social media profile assets",
+              "Updated brand sheet covering the evolved identity",
+            ],
+          },
+          {
+            title: "Migration & launch",
+            items: [
+              "Migration checklist covering where and in what order to update your brand",
+              "Side-by-side comparison of old and new identity for internal alignment",
+              "Launch recommendations for announcing the rebrand to your audience",
+            ],
+          },
+        ],
+        timeline: "15–20 business days",
+        timelineNote:
+          "The timeline begins after the deposit has been received and access to your existing brand materials has been provided.",
+        paymentTerms: [
+          "50% deposit before work begins",
+          "30% on approval of the evolved identity",
+          "20% before final files are delivered",
+        ],
+        exclusions: [
+          "Full brand strategy and repositioning work",
+          "Comprehensive brand guidelines document",
+          "Website redesign",
+          "Reprinting and production costs",
+          "Signage fabrication",
+          "Trademark registration",
+        ],
+        addOns: [
+          { name: "Comprehensive brand guidelines document", price: "From TZS 500,000" },
+          { name: "Website redesign", price: "From TZS 900,000" },
+          { name: "Additional application updates", price: "From TZS 100,000 per item" },
+          { name: "Rebrand announcement content", price: "Quoted on request" },
+          { name: "Print management", price: "Quoted on request" },
+        ],
       },
       {
-        question: "Which platforms do you advertise on?",
-        answer:
-          "Meta platforms (Facebook and Instagram) and Google Ads, including search campaigns. Social Media Advertising covers Meta, Google Ads Management covers Google, and Campaign Setup or Lead Generation Campaigns can run on whichever platform fits your audience best.",
+        id: "brand-guidelines",
+        name: "Brand Guidelines",
+        availability: "complete",
+        packageName: "Momentum Brand Guidelines",
+        startingPrice: "Starting from TZS 500,000",
+        description:
+          "A clear, professional guideline document that defines exactly how your brand should be used, so every designer, printer, and team member applies it consistently.",
+        bestFor: [
+          "Businesses with an existing logo",
+          "Growing teams",
+          "Organizations working with multiple vendors",
+          "Franchises and branches",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 500,000" },
+          { label: "Timeline", value: "7–10 business days" },
+          { label: "Revisions", value: "2 rounds included" },
+          { label: "Format", value: "Print & digital PDF" },
+        ],
+        included: [
+          {
+            title: "Logo standards",
+            items: [
+              "Logo versions and when to use each",
+              "Clear space and minimum size rules",
+              "Placement guidance",
+              "Incorrect usage examples",
+            ],
+          },
+          {
+            title: "Visual system",
+            items: [
+              "Typography rules with typefaces, weights, and hierarchy",
+              "Color specifications with print and digital values (CMYK, RGB, HEX)",
+              "Imagery and photography guidance",
+            ],
+          },
+          {
+            title: "Applications",
+            items: [
+              "Digital usage guidance for web, social media, and presentations",
+              "Print usage guidance for stationery and marketing materials",
+              "Real application examples using your existing materials",
+            ],
+          },
+          {
+            title: "Delivery",
+            items: [
+              "Professionally designed guideline document as a digital and print-ready PDF",
+              "Organized logo and asset files referenced by the document",
+            ],
+          },
+        ],
+        timeline: "7–10 business days",
+        timelineNote:
+          "The timeline begins after the deposit has been received along with your existing logo files and brand materials.",
+        paymentTerms: [
+          "60% deposit before work begins",
+          "40% before the final document is delivered",
+        ],
+        exclusions: [
+          "Logo design or redesign",
+          "New brand applications (stationery, templates)",
+          "Brand strategy and positioning work",
+          "Copywriting beyond the guideline content",
+          "Printing costs",
+        ],
+        addOns: [
+          { name: "Logo refinement before documentation", price: "From TZS 150,000" },
+          { name: "Tone of voice section", price: "From TZS 150,000" },
+          { name: "Stationery design added to the document", price: "From TZS 200,000" },
+          { name: "Editable working files", price: "Quoted on request" },
+          { name: "Annual guideline update", price: "Quoted on request" },
+        ],
       },
-      {
-        question: "Can you use my existing ad account?",
-        answer:
-          "Yes, and it is usually the better option — your account keeps its history, data, and billing. Momentum works through secure partner or manager access, so you retain full ownership. If you do not have an account yet, one is created in your name during setup.",
-      },
-      {
-        question: "How quickly can campaigns launch?",
-        answer:
-          "A Campaign Setup typically launches within 5–7 business days, and lead generation campaigns within 7–10, counted from when the deposit, account access, and materials are in place. Monthly management engagements usually have campaigns live within the first week.",
-      },
-      {
-        question: "How often will I receive reports?",
-        answer:
-          "Monthly management packages include a monthly performance report and a review call. Lead generation campaigns include a weekly lead summary. Reports are written in plain language — what was spent, what it achieved, and what happens next.",
-      },
-      {
-        question: "Can I pause campaigns?",
-        answer:
-          "Yes. Campaigns can be paused at any time — for stock issues, seasonality, or budget planning — and platforms stop charging while ads are paused. For monthly packages, we simply agree on the pause and restart dates during your review call.",
-      },
-      {
-        question: "Do you guarantee results?",
-        answer:
-          "No honest agency can guarantee a specific number of sales or leads, because performance depends on your offer, market, and budget. What Momentum guarantees is professional setup, transparent reporting, and continuous optimization based on real data.",
-      },
-      {
-        question: "Do you create the ad images and videos?",
-        answer:
-          "Management packages include creative recommendations and ad copy, while the design and production of images and videos is available as an add-on or through the Content Production packages. Existing brand materials can also be used where they fit the campaign.",
-      },
-      {
-        question: "What do you need from me to start?",
-        answer:
-          "Your business goals, access to your ad account (or permission to create one), your brand materials, an agreed ad budget, and the deposit. Every engagement starts with a discovery session where the rest is covered.",
-      },
-    ],
-  },
-  {
-    id: "content-production",
-    name: "Content Production",
-    description:
-      "Professional visual and digital content created to help brands communicate, promote, and stay visible.",
-    solutions: [
       {
         id: "social-media-content",
         name: "Social Media Content",
@@ -2248,12 +1770,415 @@ const MOMENTUM_SERVICES = [
           { name: "Additional revision round", price: "TZS 100,000" },
         ],
       },
+      {
+        id: "campaign-setup",
+        name: "Campaign Setup",
+        availability: "complete",
+        packageName: "Momentum Campaign Setup",
+        startingPrice: "Starting from TZS 450,000",
+        description:
+          "A professionally configured advertising campaign on Meta or Google for businesses starting with paid advertising — researched, structured, tracked, and launched correctly from day one.",
+        bestFor: [
+          "Small businesses",
+          "Startups",
+          "Restaurants",
+          "Hotels",
+          "NGOs",
+          "Professional firms",
+          "Local businesses",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 450,000" },
+          { label: "Timeline", value: "5–7 business days" },
+          { label: "Platform", value: "Meta or Google" },
+          { label: "Support", value: "7 days post-launch" },
+        ],
+        included: [
+          {
+            title: "Research & planning",
+            items: [
+              "Discovery session covering your goals, offer, and budget",
+              "Audience research for your market",
+              "Campaign plan with objective, targeting, and budget structure",
+            ],
+          },
+          {
+            title: "Account & tracking setup",
+            items: [
+              "Ad account review and configuration",
+              "Pixel or tracking tag setup where applicable",
+              "Campaign, ad set, and ad configuration on one platform",
+            ],
+          },
+          {
+            title: "Launch & handover",
+            items: [
+              "Campaign launch support",
+              "Basic performance report after the first week",
+              "Walkthrough of how the campaign is structured",
+              "Seven days of post-launch support",
+            ],
+          },
+        ],
+        timeline: "5–7 business days",
+        timelineNote:
+          "The timeline begins after the deposit, ad account access, and campaign materials have been received.",
+        paymentTerms: [
+          "60% deposit before work begins",
+          "40% before the campaign launches",
+        ],
+        exclusions: [
+          "The advertising budget paid to Meta or Google",
+          "Ongoing campaign management after launch",
+          "Ad creative design and video production",
+          "Landing page design and development",
+          "Multiple platforms in one setup",
+          "Copywriting beyond the ad text",
+        ],
+        addOns: [
+          { name: "Second platform setup", price: "From TZS 300,000" },
+          { name: "Ad creative design", price: "From TZS 150,000" },
+          { name: "Campaign landing page", price: "From TZS 550,000" },
+          { name: "One month of campaign management", price: "From TZS 800,000" },
+          { name: "Urgent 2–3 day setup", price: "Additional 30%" },
+        ],
+      },
+      {
+        id: "social-media-advertising",
+        name: "Social Media Advertising",
+        availability: "complete",
+        packageName: "Momentum Social Media Advertising",
+        startingPrice: "Starting from TZS 800,000 / month",
+        description:
+          "Professional monthly management of paid advertising across Meta platforms, including Facebook and Instagram — planned, monitored, and optimized so your budget works harder every month.",
+        bestFor: [
+          "Retail businesses",
+          "Restaurants",
+          "Hotels",
+          "Personal brands",
+          "E-commerce",
+          "NGOs",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 800,000 / month" },
+          { label: "Timeline", value: "Monthly service" },
+          { label: "Platforms", value: "Facebook & Instagram" },
+          { label: "Reporting", value: "Monthly report" },
+        ],
+        included: [
+          {
+            title: "Campaign management",
+            items: [
+              "Monthly campaign planning aligned to your goals and promotions",
+              "Campaign and ad set management across Facebook and Instagram",
+              "Budget management and pacing throughout the month",
+            ],
+          },
+          {
+            title: "Optimization",
+            items: [
+              "Audience testing and optimization",
+              "Ad creative recommendations based on performance",
+              "Continuous optimization of targeting, placements, and bids",
+            ],
+          },
+          {
+            title: "Monitoring & reporting",
+            items: [
+              "Ongoing performance monitoring",
+              "Monthly performance report in plain language",
+              "Monthly review call to plan the next cycle",
+            ],
+          },
+        ],
+        timeline: "Monthly service",
+        timelineNote:
+          "Management begins once the first monthly payment has been received and ad account access has been provided. Existing campaigns are reviewed in the first week.",
+        paymentTerms: [
+          "Billed monthly in advance",
+          "The advertising budget is paid directly to Meta and agreed separately",
+        ],
+        exclusions: [
+          "The advertising budget paid to Meta",
+          "Ad creative design and video production",
+          "Organic content creation and posting",
+          "Community management and comment replies",
+          "Landing page design and development",
+          "Platforms outside Meta",
+        ],
+        addOns: [
+          { name: "Ad creative design", price: "From TZS 150,000 / month" },
+          { name: "Short video ads", price: "From TZS 100,000 per video" },
+          { name: "Google Ads management", price: "From TZS 900,000 / month" },
+          { name: "Campaign landing page", price: "From TZS 550,000" },
+          { name: "Monthly social media content", price: "From TZS 600,000 / month" },
+        ],
+      },
+      {
+        id: "google-ads-management",
+        name: "Google Ads Management",
+        availability: "complete",
+        packageName: "Momentum Google Ads Management",
+        startingPrice: "Starting from TZS 900,000 / month",
+        description:
+          "Professional Google Ads management focused on reaching customers at the moment they are actively searching for your products and services.",
+        bestFor: [
+          "Service businesses",
+          "Professional firms",
+          "Local businesses",
+          "Healthcare",
+          "Education",
+          "Technology companies",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 900,000 / month" },
+          { label: "Timeline", value: "Monthly service" },
+          { label: "Focus", value: "Search campaigns" },
+          { label: "Reporting", value: "Monthly report" },
+        ],
+        included: [
+          {
+            title: "Setup & structure",
+            items: [
+              "Keyword research for your services and market",
+              "Campaign setup with structured ad groups",
+              "Search campaigns targeting high-intent queries",
+              "Conversion tracking setup",
+            ],
+          },
+          {
+            title: "Ongoing management",
+            items: [
+              "Bid and budget management throughout the month",
+              "Negative keyword management to cut wasted spend",
+              "Ad copy testing and refinement",
+              "Continuous optimization based on performance data",
+            ],
+          },
+          {
+            title: "Reporting & guidance",
+            items: [
+              "Monthly performance report in plain language",
+              "Budget recommendations based on results",
+              "Monthly review call to plan the next cycle",
+            ],
+          },
+        ],
+        timeline: "Monthly service",
+        timelineNote:
+          "Management begins once the first monthly payment has been received and ad account access has been provided. New accounts are typically live within the first week.",
+        paymentTerms: [
+          "Billed monthly in advance",
+          "The advertising budget is paid directly to Google and agreed separately",
+        ],
+        exclusions: [
+          "The advertising budget paid to Google",
+          "Landing page design and development",
+          "Display banner and video ad production",
+          "SEO and organic search work",
+          "Google Business Profile management",
+          "Platforms outside Google Ads",
+        ],
+        addOns: [
+          { name: "Display or YouTube campaigns", price: "Quoted on request" },
+          { name: "Campaign landing page", price: "From TZS 550,000" },
+          { name: "Display banner design", price: "From TZS 150,000" },
+          { name: "Social media advertising", price: "From TZS 800,000 / month" },
+          { name: "Additional conversion tracking setup", price: "Quoted on request" },
+        ],
+      },
+      {
+        id: "lead-generation-campaigns",
+        name: "Lead Generation Campaigns",
+        availability: "complete",
+        packageName: "Momentum Lead Generation Campaign",
+        startingPrice: "Starting from TZS 1,200,000",
+        description:
+          "An advertising campaign built specifically to generate qualified enquiries, bookings, or customer leads — planned, launched, and managed through a full campaign cycle.",
+        bestFor: [
+          "Real estate",
+          "Education",
+          "Healthcare",
+          "Consulting",
+          "NGOs",
+          "Financial services",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 1,200,000" },
+          { label: "Launch", value: "7–10 business days" },
+          { label: "Management", value: "30-day campaign cycle" },
+          { label: "Reporting", value: "Weekly lead summary" },
+        ],
+        included: [
+          {
+            title: "Planning & targeting",
+            items: [
+              "Campaign planning session covering your offer and lead goals",
+              "Audience targeting built around your ideal customer",
+              "Landing page recommendations, or lead forms built on the ad platform",
+            ],
+          },
+          {
+            title: "Launch & management",
+            items: [
+              "Lead form setup and testing before launch",
+              "Campaign launch on the agreed platform",
+              "Optimization of targeting, creative, and budget across the 30-day cycle",
+            ],
+          },
+          {
+            title: "Leads & reporting",
+            items: [
+              "Weekly lead delivery and performance summary",
+              "Lead quality review midway through the campaign",
+              "End-of-campaign review with results and recommendations",
+            ],
+          },
+        ],
+        timeline: "7–10 business days to launch, then a 30-day campaign cycle",
+        timelineNote:
+          "The timeline begins after the deposit, ad account access, and campaign materials have been received.",
+        paymentTerms: [
+          "60% deposit before work begins",
+          "40% before the campaign launches",
+          "The advertising budget is paid directly to the platform and agreed separately",
+        ],
+        exclusions: [
+          "The advertising budget paid to the platform",
+          "Landing page design and development",
+          "Ad creative design and video production",
+          "CRM setup and lead follow-up on your behalf",
+          "A guaranteed number or cost of leads",
+          "Management beyond the 30-day cycle",
+        ],
+        addOns: [
+          { name: "Campaign landing page", price: "From TZS 550,000" },
+          { name: "Ad creative design", price: "From TZS 150,000" },
+          { name: "Additional 30-day campaign cycle", price: "From TZS 800,000" },
+          { name: "Second platform", price: "Quoted on request" },
+          { name: "Lead handover automation (email or sheet)", price: "Quoted on request" },
+        ],
+      },
+      {
+        id: "marketing-strategy-consulting",
+        name: "Marketing Strategy & Consulting",
+        availability: "complete",
+        packageName: "Momentum Marketing Strategy",
+        startingPrice: "Starting from TZS 700,000",
+        description:
+          "Strategic consulting that gives you a clear, practical plan — where to advertise, how to allocate your budget, and how to improve marketing performance before you spend more.",
+        bestFor: [
+          "Growing businesses",
+          "Organizations",
+          "Companies launching products",
+          "Businesses entering new markets",
+        ],
+        highlights: [
+          { label: "Starting from", value: "TZS 700,000" },
+          { label: "Timeline", value: "7–10 business days" },
+          { label: "Deliverable", value: "Strategy document" },
+          { label: "Handover", value: "Presentation session" },
+        ],
+        included: [
+          {
+            title: "Discovery & review",
+            items: [
+              "Discovery workshop with your team",
+              "Review of your current marketing channels and results",
+              "Competitor analysis for your market",
+            ],
+          },
+          {
+            title: "Strategy",
+            items: [
+              "Target audience definition",
+              "Channel recommendations with reasoning for each",
+              "Campaign roadmap for the next three to six months",
+              "Budget recommendations by channel",
+            ],
+          },
+          {
+            title: "Delivery",
+            items: [
+              "Written strategy document you keep and act on",
+              "Strategy presentation session with your team",
+              "Two weeks of follow-up questions by email or WhatsApp",
+            ],
+          },
+        ],
+        timeline: "7–10 business days",
+        timelineNote:
+          "The timeline begins after the deposit has been received and the discovery workshop is complete.",
+        paymentTerms: [
+          "60% deposit before work begins",
+          "40% before the strategy is delivered",
+        ],
+        exclusions: [
+          "Campaign setup and execution",
+          "Ongoing campaign management",
+          "The advertising budget itself",
+          "Ad creative and content production",
+          "Brand strategy and identity work",
+          "Implementation beyond the strategy document",
+        ],
+        addOns: [
+          { name: "Campaign setup based on the strategy", price: "From TZS 450,000" },
+          { name: "Monthly campaign management", price: "From TZS 800,000 / month" },
+          { name: "Quarterly strategy review", price: "From TZS 300,000" },
+          { name: "Extended implementation support", price: "Quoted on request" },
+        ],
+      },
     ],
     faqs: [
       {
+        question: "Will I own the logo?",
+        answer:
+          "Yes. Once the project is fully paid, full ownership of the final logo and brand assets transfers to you. Momentum retains the right to display the work in its portfolio unless agreed otherwise.",
+      },
+      {
+        question: "Which file formats are delivered?",
+        answer:
+          "Every logo package includes vector source files (AI, EPS, SVG) for professional printing and signage, high-resolution PNG files with transparent backgrounds for everyday digital use, and a print-ready PDF.",
+      },
+      {
         question: "How many revisions are included?",
         answer:
-          "Every Content Production package includes two revision rounds — on the monthly batch for Social Media Content, on the edit for video projects, and across the asset set for Campaign Content. Additional rounds are available as an add-on.",
+          "Each package includes a defined number of revision rounds — two for Logo Design, Brand Starter Kit, and Brand Guidelines, three for Complete Brand Identity and Rebranding, and two on every content package: the monthly batch for Social Media Content, the edit for video projects, and the asset set for Campaign Content. Additional rounds are available as an add-on.",
+      },
+      {
+        question: "Can you redesign my existing logo?",
+        answer:
+          "Yes. The Rebranding package evolves an existing identity while preserving the recognition you have built. If you only need the logo modernized without the wider brand work, contact Momentum for a tailored quotation.",
+      },
+      {
+        question: "Why do I need brand guidelines?",
+        answer:
+          "Guidelines keep your brand consistent as more people work with it. When designers, printers, and staff all follow the same rules for logo usage, colors, and typography, your business looks professional everywhere it appears — and you avoid costly reprints caused by inconsistent files.",
+      },
+      {
+        question: "Can you design business cards and stationery?",
+        answer:
+          "Yes. Business cards, letterheads, and email signatures are included in the Brand Starter Kit, Complete Brand Identity, and Rebranding packages, and are available as an add-on to Logo Design.",
+      },
+      {
+        question: "Can you create social media templates?",
+        answer:
+          "Yes. Social media post templates are included in the Complete Brand Identity package and available as an add-on to the Brand Starter Kit. All packages include social profile assets sized for your key platforms.",
+      },
+      {
+        question: "Do you handle printing?",
+        answer:
+          "All designs are delivered print-ready. Printing itself is not included, but Momentum can manage the printing process with trusted vendors as an add-on service.",
+      },
+      {
+        question: "What do you need from me to start?",
+        answer:
+          "For branding and content projects: your business information, any existing brand materials, examples of work you like, and the deposit. For advertising: your business goals, access to your ad account (or permission to create one), your brand materials, and an agreed ad budget. Every engagement starts with a discovery session where the rest is covered.",
+      },
+      {
+        question: "Can I start with a logo and expand later?",
+        answer:
+          "Yes. Many clients begin with Logo Design and later add stationery, templates, or full guidelines. The visual foundation carries forward, so earlier work is never wasted.",
       },
       {
         question: "Who owns the final content?",
@@ -2299,6 +2224,51 @@ const MOMENTUM_SERVICES = [
         question: "How far in advance should we book?",
         answer:
           "Photography sessions can usually be scheduled within one to two weeks. Video productions need two to three weeks of lead time for planning, and campaign content is best booked three to four weeks before your launch date.",
+      },
+      {
+        question: "Do advertising costs include the ad budget?",
+        answer:
+          "No. Momentum's fees cover strategy, setup, management, and reporting. The advertising budget — the money spent on ads — is paid by you directly to Meta or Google, so you always control and see exactly what is spent.",
+      },
+      {
+        question: "How much should I spend on ads?",
+        answer:
+          "It depends on your goals, market, and competition. Most small businesses start with TZS 300,000 to 1,000,000 per month in ad budget and adjust based on results. Every engagement starts with a budget recommendation matched to your objectives, and you never spend more than you approve.",
+      },
+      {
+        question: "Which platforms do you advertise on?",
+        answer:
+          "Meta platforms (Facebook and Instagram) and Google Ads, including search campaigns. Social Media Advertising covers Meta, Google Ads Management covers Google, and Campaign Setup or Lead Generation Campaigns can run on whichever platform fits your audience best.",
+      },
+      {
+        question: "Can you use my existing ad account?",
+        answer:
+          "Yes, and it is usually the better option — your account keeps its history, data, and billing. Momentum works through secure partner or manager access, so you retain full ownership. If you do not have an account yet, one is created in your name during setup.",
+      },
+      {
+        question: "How quickly can campaigns launch?",
+        answer:
+          "A Campaign Setup typically launches within 5–7 business days, and lead generation campaigns within 7–10, counted from when the deposit, account access, and materials are in place. Monthly management engagements usually have campaigns live within the first week.",
+      },
+      {
+        question: "How often will I receive reports?",
+        answer:
+          "Monthly management packages include a monthly performance report and a review call. Lead generation campaigns include a weekly lead summary. Reports are written in plain language — what was spent, what it achieved, and what happens next.",
+      },
+      {
+        question: "Can I pause campaigns?",
+        answer:
+          "Yes. Campaigns can be paused at any time — for stock issues, seasonality, or budget planning — and platforms stop charging while ads are paused. For monthly packages, we simply agree on the pause and restart dates during your review call.",
+      },
+      {
+        question: "Do you guarantee results?",
+        answer:
+          "No honest agency can guarantee a specific number of sales or leads, because performance depends on your offer, market, and budget. What Momentum guarantees is professional setup, transparent reporting, and continuous optimization based on real data.",
+      },
+      {
+        question: "Do you create the ad images and videos?",
+        answer:
+          "Management packages include creative recommendations and ad copy, while the design and production of images and videos is available as an add-on or through the content packages in this service, such as Photography, Videography, and Campaign Content. Existing brand materials can also be used where they fit the campaign.",
       },
     ],
   },
