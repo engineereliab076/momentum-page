@@ -1157,35 +1157,6 @@ momentum-navigation {
   margin-bottom: 12px;
 }
 
-/* ---------------- How we work ---------------- */
-.process-grid {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px; /* hairline gaps read as dividers */
-  background: var(--color-divider-2);
-  border: 1px solid var(--color-divider-2);
-}
-
-.process-step {
-  background: var(--color-bg);
-  padding: clamp(26px, 3.5vw, 40px);
-}
-
-.process-step h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-block: 14px 8px;
-}
-
-.process-step p {
-  color: var(--color-muted);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  max-width: 40ch;
-}
-
 /* ---------------- FAQ ---------------- */
 .faq-list {
   max-width: 780px;
@@ -1624,10 +1595,6 @@ a.contact-link:hover {
   .solution-tab::after {
     display: none;
   }
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 640px) {
@@ -1799,10 +1766,6 @@ a.contact-link:hover {
   .accordion summary {
     min-height: 56px;
     padding-block: 17px;
-  }
-
-  .process-grid {
-    grid-template-columns: 1fr;
   }
 
   /* Collapse nav into a toggle menu */
