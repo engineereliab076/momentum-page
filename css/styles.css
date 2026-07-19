@@ -435,18 +435,23 @@ momentum-navigation {
 }
 
 .hero-wordmark {
+  max-width: 100%;
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
   font-size: var(--type-hero);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-weight: normal;
+  letter-spacing: -0.02em;
   line-height: 0.98;
+  white-space: nowrap;
   color: #ffffff;                    /* against the dark video overlay */
 }
 
 .hero-tagline {
   width: 88%;
-  max-width: 320px;
+  max-width: 340px;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(0.72rem, calc(0.7rem + 0.18vw), 0.82rem);
-  line-height: 1.55;
+  font-weight: normal;
+  line-height: 1.6;
   text-align: center;
   color: rgba(255, 255, 255, 0.78);  /* against the dark video overlay */
   margin-block: clamp(18px, 2.5vw, 24px) clamp(28px, 4vw, 36px);
