@@ -49,7 +49,6 @@
           <div class="container header-inner">
             <a href="index.html" class="brand" aria-label="Momentum home">
               <img src="photos/trajectory-mono-light.png" alt="Momentum logo" class="brand-logo" />
-              <span class="brand-name">Momentum</span>
             </a>
 
             <nav class="nav" aria-label="Primary">

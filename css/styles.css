@@ -200,7 +200,6 @@ momentum-navigation {
   display: inline-flex;
   align-items: center;
   justify-self: start;
-  gap: 9px;
   line-height: 1;
   transition: opacity var(--transition);
 }
@@ -213,12 +212,6 @@ momentum-navigation {
   width: 32px;
   height: auto;
   display: block;
-}
-
-.brand-name {
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: -0.025em;
 }
 
 .nav {
