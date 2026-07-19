@@ -2,8 +2,8 @@
    MOMENTUM — vanilla JS
    Small, independent enhancements:
    1. Scroll-triggered fade-ins (IntersectionObserver)
-   2. Contact-form handling + package enquiry prefill
-   3. Footer year
+   2. Footer year
+   The consultation request flow lives in js/consultation.js.
    ========================================================= */
 
 /* Ensure every route mounts the shared navigation, including a stale or
@@ -50,117 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => observer.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
-  }
-
-  /* ---- 2. Contact form + package preselection -----------
-     Submits to the Formspree endpoint set in the form's
-     `action` attribute (see index.html — paste your form ID
-     there). We POST via fetch so the page never reloads and
-     we can show an inline confirmation.
-
-     services.html links here with
-     ?service=…&solution=…&package=…#contact. The matching
-     service option is selected and the package details are
-     kept in dedicated hidden fields, so editing the project
-     message never removes the original selection. */
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-
-  if (form) {
-    const serviceField = document.getElementById("service");
-    const solutionField = document.getElementById("selected-solution");
-    const packageField = document.getElementById("selected-package");
-    const enquiryContext = document.getElementById("enquiry-context");
-    const enquiryContextValue = document.getElementById("enquiry-context-value");
-    const params = new URLSearchParams(window.location.search);
-
-    const setStatus = (message, state = "") => {
-      status.textContent = message;
-      status.classList.remove("is-error", "is-success");
-      if (state) status.classList.add(`is-${state}`);
-    };
-
-    /* Former top-level services now live under Marketing & Advertising.
-       Old enquiry links keep working: the service is remapped while the
-       selected solution and package are preserved as-is. */
-    const legacyServiceMap = {
-      "brand identity": "Marketing & Advertising",
-      "paid advertising": "Marketing & Advertising",
-      "content production": "Marketing & Advertising",
-    };
-
-    const applyEnquiryPrefill = () => {
-      const requested = params.get("service")?.trim() || "";
-      const service = legacyServiceMap[requested.toLowerCase()] || requested;
-      const solution = params.get("solution")?.trim() || "";
-      const pkg = params.get("package")?.trim() || "";
-
-      if (service && serviceField) {
-        const matchingOption = Array.from(serviceField.options).find(
-          (option) => option.value.toLowerCase() === service.toLowerCase()
-        );
-        if (matchingOption) serviceField.value = matchingOption.value;
-      }
-
-      if (solutionField) solutionField.value = solution;
-      if (packageField) packageField.value = pkg;
-
-      const selectedItem = pkg || solution;
-      if (enquiryContext && enquiryContextValue && selectedItem) {
-        enquiryContextValue.textContent = service
-          ? `${selectedItem} — ${service}`
-          : selectedItem;
-        enquiryContext.hidden = false;
-      }
-    };
-
-    applyEnquiryPrefill();
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        setStatus("Please complete the required fields and check your email address.", "error");
-        form.reportValidity();
-        return;
-      }
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const defaultButtonText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.setAttribute("aria-busy", "true");
-      submitBtn.textContent = "Sending enquiry…";
-      setStatus("Sending your enquiry…");
-
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
-
-        if (response.ok) {
-          form.reset();
-          applyEnquiryPrefill();
-          setStatus("Thanks — your enquiry has been sent. We'll be in touch.", "success");
-        } else {
-          // Formspree returns JSON errors (e.g. before the form ID is set up)
-          setStatus(
-            "We couldn't send your enquiry. Your details are still here — please try again or email us directly.",
-            "error"
-          );
-        }
-      } catch (err) {
-        setStatus(
-          "We couldn't connect. Your details are still here — check your connection or email us directly.",
-          "error"
-        );
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.removeAttribute("aria-busy");
-        submitBtn.textContent = defaultButtonText;
-      }
-    });
   }
 
   /* ---- Footer year (auto-updates) ------------------------ */

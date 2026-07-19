@@ -42,13 +42,15 @@
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
 
-      <div class="container hero-inner">
-        <h1 class="hero-wordmark hero-anim">Momentum</h1>
-        <p class="hero-tagline hero-anim">
-          A marketing and technology studio building brands that move,
-          and the systems that keep them moving.
-        </p>
-        <a href="#contact" class="btn btn-lg hero-anim">Get in touch</a>
+      <div class="container">
+        <div class="hero-inner">
+          <h1 class="hero-wordmark hero-anim">Momentum</h1>
+          <p class="hero-tagline hero-anim">
+            A marketing and technology studio building brands that move,
+            and the systems that keep them moving.
+          </p>
+          <a href="#contact" class="btn btn-lg hero-anim">Get in touch</a>
+        </div>
       </div>
 
       <!-- Scroll-down indicator -->
@@ -113,95 +115,285 @@
       </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
+    <!-- ===================== CONSULTATION REQUEST ===================== -->
     <section class="section" id="contact">
-      <div class="container contact-container">
+      <div class="container">
         <header class="section-head contact-intro reveal">
-          <p class="eyebrow">Get in touch</p>
-          <h2 class="section-title">Tell us about your project</h2>
+          <p class="eyebrow">Book a consultation</p>
+          <h2 class="section-title">Let&rsquo;s discuss your project</h2>
           <p class="contact-intro-copy">
-            Have a website, branding, advertising, content, or automation project
-            in mind? Share a few details and we&rsquo;ll respond with the next steps.
+            Book a consultation with Momentum to discuss your business,
+            project, requirements, and the best path forward.
           </p>
+          <dl class="consult-meta">
+            <div class="consult-meta-item">
+              <dt>Consultation fee</dt>
+              <dd>TZS 100,000</dd>
+            </div>
+            <div class="consult-meta-item">
+              <dt>Timezone</dt>
+              <dd>East Africa Time (UTC+3)</dd>
+            </div>
+          </dl>
         </header>
 
-        <!-- Contact form — submitted to Formspree (free) via JS in js/main.js.
-               ┌─────────────────────────────────────────────────────────────┐
-               │ PASTE YOUR FORMSPREE ID HERE:                                │
-               │ 1. Create a free form at https://formspree.io               │
-               │ 2. It gives you an endpoint like https://formspree.io/f/abc123 │
-               │ 3. Replace ONLY "YOUR_FORM_ID" in the action below with the  │
-               │    part after /f/  (e.g. action=".../f/abc123")              │
-               └─────────────────────────────────────────────────────────────┘ -->
+        <!-- Consultation request form — a four-step flow driven by
+             js/consultation.js with appointment options from
+             js/availability.js. The final action validates the form and
+             opens a URL-encoded consultation message in WhatsApp. -->
         <form
-          class="contact-form reveal"
-          id="contact-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
+          class="consult-form reveal"
+          id="consultation-form"
           novalidate
         >
-            <div class="enquiry-context" id="enquiry-context" hidden>
-              <span>Selected enquiry</span>
-              <strong id="enquiry-context-value"></strong>
+          <!-- Step indicator: completed steps become clickable shortcuts -->
+          <ol class="consult-steps">
+            <li>
+              <button type="button" class="consult-step" data-step-indicator="1" disabled>
+                <span class="consult-step-num" aria-hidden="true">1</span>
+                <span class="consult-step-label">Consultation</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="consult-step" data-step-indicator="2" disabled>
+                <span class="consult-step-num" aria-hidden="true">2</span>
+                <span class="consult-step-label">Appointment</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="consult-step" data-step-indicator="3" disabled>
+                <span class="consult-step-num" aria-hidden="true">3</span>
+                <span class="consult-step-label">Your details</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="consult-step" data-step-indicator="4" disabled>
+                <span class="consult-step-num" aria-hidden="true">4</span>
+                <span class="consult-step-label">Review</span>
+              </button>
+            </li>
+          </ol>
+
+          <input type="hidden" id="selected-solution" name="selected_solution" />
+          <input type="hidden" id="selected-package" name="selected_package" />
+
+          <!-- STEP 1 — what the consultation includes -->
+          <section class="consult-panel" data-step="1">
+            <div class="consult-panel-head">
+              <h3 class="consult-panel-title">Consultation details</h3>
+              <p class="consult-panel-copy">
+                A focused session with Momentum, covering:
+              </p>
             </div>
-
-            <input type="hidden" id="selected-solution" name="selected_solution" />
-            <input type="hidden" id="selected-package" name="selected_package" />
-            <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="name">Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name" />
-              </div>
-              <div class="field">
-                <label for="email">Email <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" required autocomplete="email" />
-              </div>
+            <ul class="consult-list">
+              <li>Project discussion</li>
+              <li>Requirement analysis</li>
+              <li>Service recommendations</li>
+              <li>Technical guidance</li>
+              <li>Project planning</li>
+            </ul>
+            <div class="consult-nav consult-nav-end">
+              <button type="button" class="btn" data-step-next>Continue</button>
             </div>
+          </section>
 
-            <div class="form-row">
-              <div class="field">
-                <label for="phone">Phone or WhatsApp number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  autocomplete="tel"
-                  inputmode="tel"
-                />
+          <!-- STEP 2 — preferred appointment (options from js/availability.js) -->
+          <section class="consult-panel" data-step="2" hidden>
+            <div class="consult-panel-head">
+              <h3 class="consult-panel-title">Preferred appointment</h3>
+              <p class="consult-panel-copy">
+                Choose the date and time that suit you best. All times are
+                East Africa Time (UTC+3).
+              </p>
+            </div>
+            <div class="consult-fields">
+              <div class="form-row">
+                <div class="field">
+                  <label for="consult-date">Preferred date <span aria-hidden="true">*</span></label>
+                  <input
+                    type="date"
+                    id="consult-date"
+                    name="preferred_date"
+                    required
+                    aria-describedby="consult-date-hint"
+                  />
+                  <p class="field-hint" id="consult-date-hint"></p>
+                </div>
+                <div class="field">
+                  <label for="consult-time">Preferred time <span aria-hidden="true">*</span></label>
+                  <select id="consult-time" name="preferred_time" required disabled>
+                    <option value="">Select a date first</option>
+                  </select>
+                </div>
               </div>
+              <p class="consult-note">
+                Requested times are subject to availability — Momentum reviews
+                every request and confirms your appointment personally.
+              </p>
+            </div>
+            <div class="consult-nav">
+              <button type="button" class="btn btn-outline" data-step-back>Back</button>
+              <button type="button" class="btn" data-step-next>Continue</button>
+            </div>
+          </section>
+
+          <!-- STEP 3 — client information -->
+          <section class="consult-panel" data-step="3" hidden>
+            <div class="consult-panel-head">
+              <h3 class="consult-panel-title">Your information</h3>
+              <p class="consult-panel-copy">
+                Tell us who you are and what you&rsquo;d like to discuss.
+              </p>
+            </div>
+            <div class="consult-fields">
+              <div class="enquiry-context" id="enquiry-context" hidden>
+                <span>Selected package</span>
+                <strong id="enquiry-context-value"></strong>
+              </div>
+
+              <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Full name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label for="email">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                    inputmode="tel"
+                  />
+                </div>
+                <div class="field">
+                  <label for="business">Business name</label>
+                  <input type="text" id="business" name="business_name" autocomplete="organization" />
+                </div>
+              </div>
+
               <div class="field">
-                <label for="service">Service needed <span aria-hidden="true">*</span></label>
+                <label for="service">Service of interest <span aria-hidden="true">*</span></label>
                 <select id="service" name="service" required>
                   <option value="">Select a service</option>
                   <option value="Website Development">Website Development</option>
-                  <option value="AI &amp; Business Automation">AI &amp; Business Automation</option>
                   <option value="Marketing &amp; Advertising">Marketing &amp; Advertising</option>
+                  <option value="AI &amp; Business Automation">AI &amp; Business Automation</option>
                   <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
-            </div>
 
-            <div class="field">
-              <label for="message">Project details <span aria-hidden="true">*</span></label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                required
-                aria-describedby="message-hint"
-              ></textarea>
-              <p class="field-hint" id="message-hint">
-                Tell us what you need, your goals, and any useful timeline or budget details.
+              <div class="field">
+                <label for="message">Project description <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-describedby="message-hint"
+                ></textarea>
+                <p class="field-hint" id="message-hint">
+                  Tell us about your business, your goals, and what you&rsquo;d
+                  like to cover in the consultation.
+                </p>
+              </div>
+
+              <fieldset class="consult-choice">
+                <legend>Meeting preference <span aria-hidden="true">*</span></legend>
+                <!-- Options rendered from MEETING_PREFERENCES in js/consultation.js
+                     so the list is configured in one place. -->
+                <div class="consult-choice-options" id="meeting-preference-options"></div>
+              </fieldset>
+
+              <!-- Shown by js/consultation.js only while Physical Meeting is
+                   selected; the input is disabled when hidden so it is never
+                   submitted for other meeting formats. -->
+              <div class="consult-conditional" id="physical-meeting-fields" hidden>
+                <p class="consult-note">
+                  Physical meetings are subject to location and availability.
+                  Momentum will confirm the venue and any related arrangements
+                  after reviewing your request.
+                </p>
+                <div class="field">
+                  <label for="meeting-area">Preferred meeting location or area</label>
+                  <input
+                    type="text"
+                    id="meeting-area"
+                    name="preferred_meeting_area"
+                    placeholder="Dar es Salaam, city centre, client office, or preferred area"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="consult-nav">
+              <button type="button" class="btn btn-outline" data-step-back>Back</button>
+              <button type="button" class="btn" data-step-next>Continue</button>
+            </div>
+          </section>
+
+          <!-- STEP 4 — review before sending -->
+          <section class="consult-panel" data-step="4" hidden>
+            <div class="consult-panel-head">
+              <h3 class="consult-panel-title">Review your request</h3>
+              <p class="consult-panel-copy">
+                Please check the details below before sending your consultation request.
               </p>
             </div>
 
-            <div class="form-submit">
-              <button type="submit" class="btn btn-lg">Send enquiry</button>
-              <p class="response-note">We usually respond within one business day.</p>
+            <div class="consult-review">
+              <section class="consult-review-group">
+                <header class="consult-review-head">
+                  <h4>Consultation</h4>
+                  <button type="button" class="consult-edit" data-edit-step="2">Edit</button>
+                </header>
+                <dl>
+                  <div><dt>Date</dt><dd id="review-date">—</dd></div>
+                  <div><dt>Time</dt><dd id="review-time">—</dd></div>
+                  <div><dt>Timezone</dt><dd>East Africa Time (UTC+3)</dd></div>
+                  <div><dt>Meeting preference</dt><dd id="review-meeting">—</dd></div>
+                  <div id="review-location-row" hidden><dt>Meeting area</dt><dd id="review-location"></dd></div>
+                </dl>
+              </section>
+
+              <section class="consult-review-group">
+                <header class="consult-review-head">
+                  <h4>Project</h4>
+                  <button type="button" class="consult-edit" data-edit-step="3">Edit</button>
+                </header>
+                <dl>
+                  <div><dt>Service</dt><dd id="review-service">—</dd></div>
+                  <div id="review-package-row" hidden><dt>Package</dt><dd id="review-package"></dd></div>
+                  <div><dt>Project summary</dt><dd id="review-summary">—</dd></div>
+                </dl>
+              </section>
+
+              <p class="consult-fee-line">
+                <span>Consultation fee</span>
+                <strong>TZS 100,000</strong>
+              </p>
             </div>
+
+            <div class="consult-nav">
+              <button type="button" class="btn btn-outline" data-step-back>Back</button>
+              <button type="submit" class="btn btn-lg">Send Request on WhatsApp</button>
+            </div>
+            <p class="response-note">
+              WhatsApp will open with your consultation details. Review the
+              message and tap Send to complete your request.
+            </p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </section>
         </form>
 
         <section class="direct-contact reveal" aria-labelledby="direct-contact-title">
@@ -209,9 +401,9 @@
           <div class="contact-methods">
             <a
               class="contact-link"
-              href="https://wa.me/255769665240"
+              href="https://wa.me/255769665240?text=Hello%20Momentum%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <span class="contact-label">WhatsApp</span>
               <span class="contact-value">+255 769 665 240</span>
@@ -245,7 +437,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <nav class="footer-contact" aria-label="Contact">
-        <a href="https://wa.me/255769665240" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/255769665240?text=Hello%20Momentum%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <a href="tel:+255769665240">Call</a>
         <a href="mailto:eliabujohnmpuya@gmail.com">Email</a>
         <!-- INSTAGRAM: update this href with your real handle (see contact section). -->
@@ -255,6 +447,8 @@
     </div>
   </footer>
 
+  <script src="js/availability.js"></script>
+  <script src="js/consultation.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
