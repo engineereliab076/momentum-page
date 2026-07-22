@@ -5,6 +5,19 @@
    whole site — nothing downstream hardcodes a colour.
    ========================================================= */
 
+/* Self-hosted Montserrat Black (900) for the hero wordmark only.
+   Self-hosting (rather than a Google Fonts <link>) guarantees the
+   exact same weight renders on every device — including phones that
+   lack "Arial Black" — with no CDN dependency and no layout shift.
+   font-display: swap keeps the hero text visible while the file loads. */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../assets/fonts/montserrat-900-latin.woff2") format("woff2");
+}
+
 :root {
   /* --- Colour palette (strict black & white) --- */
   --color-bg: #ffffff;        /* page background          */
@@ -20,6 +33,8 @@
   /* --- Typography --- */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
+  /* Hero wordmark only — self-hosted Montserrat Black (see @font-face above). */
+  --font-hero: "Montserrat", var(--font-sans);
   --type-label: 0.75rem;
   --type-small: 0.85rem;
   --type-body: 0.95rem;
@@ -436,13 +451,15 @@ momentum-navigation {
 
 .hero-wordmark {
   max-width: 100%;
-  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-family: var(--font-hero);     /* self-hosted Montserrat Black (900) */
   font-size: var(--type-hero);
-  font-weight: normal;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  letter-spacing: normal;            /* clean, premium — no extra tracking */
   line-height: 0.98;
   white-space: nowrap;
   color: #ffffff;                    /* against the dark video overlay */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .hero-tagline {
