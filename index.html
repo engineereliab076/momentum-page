@@ -35,16 +35,16 @@
         loop
         playsinline
         preload="metadata"
-        poster="/photos/city-poster.jpg"
+        poster="photos/new-video-poster.jpg"
         aria-hidden="true"
       >
-        <source src="/videos/city.mp4" type="video/mp4" />
+        <source src="videos/new-video.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="container">
         <div class="hero-inner">
-          <h1 class="hero-wordmark hero-anim">Momentum</h1>
+          <h1 class="hero-wordmark hero-anim">Momentum.</h1>
           <p class="hero-tagline hero-anim">
             A marketing and technology studio building brands that move,
             and the systems that keep them moving.
@@ -130,16 +130,11 @@
               <dt>Consultation fee</dt>
               <dd>TZS 100,000</dd>
             </div>
-            <div class="consult-meta-item">
-              <dt>Timezone</dt>
-              <dd>East Africa Time (UTC+3)</dd>
-            </div>
           </dl>
         </header>
 
-        <!-- Consultation request form — a four-step flow driven by
-             js/consultation.js with appointment options from
-             js/availability.js. The final action validates the form and
+        <!-- Consultation request form — a three-step flow driven by
+             js/consultation.js. The final action validates the form and
              opens a URL-encoded consultation message in WhatsApp. -->
         <form
           class="consult-form reveal"
@@ -157,18 +152,12 @@
             <li>
               <button type="button" class="consult-step" data-step-indicator="2" disabled>
                 <span class="consult-step-num" aria-hidden="true">2</span>
-                <span class="consult-step-label">Appointment</span>
+                <span class="consult-step-label">Your details</span>
               </button>
             </li>
             <li>
               <button type="button" class="consult-step" data-step-indicator="3" disabled>
                 <span class="consult-step-num" aria-hidden="true">3</span>
-                <span class="consult-step-label">Your details</span>
-              </button>
-            </li>
-            <li>
-              <button type="button" class="consult-step" data-step-indicator="4" disabled>
-                <span class="consult-step-num" aria-hidden="true">4</span>
                 <span class="consult-step-label">Review</span>
               </button>
             </li>
@@ -192,53 +181,18 @@
               <li>Technical guidance</li>
               <li>Project planning</li>
             </ul>
+            <p class="consult-note">
+              This is a consultation request, not a confirmed booking. Momentum
+              reviews every request and will get back to you with the next steps
+              and payment instructions.
+            </p>
             <div class="consult-nav consult-nav-end">
               <button type="button" class="btn" data-step-next>Continue</button>
             </div>
           </section>
 
-          <!-- STEP 2 — preferred appointment (options from js/availability.js) -->
+          <!-- STEP 2 — client information -->
           <section class="consult-panel" data-step="2" hidden>
-            <div class="consult-panel-head">
-              <h3 class="consult-panel-title">Preferred appointment</h3>
-              <p class="consult-panel-copy">
-                Choose the date and time that suit you best. All times are
-                East Africa Time (UTC+3).
-              </p>
-            </div>
-            <div class="consult-fields">
-              <div class="form-row">
-                <div class="field">
-                  <label for="consult-date">Preferred date <span aria-hidden="true">*</span></label>
-                  <input
-                    type="date"
-                    id="consult-date"
-                    name="preferred_date"
-                    required
-                    aria-describedby="consult-date-hint"
-                  />
-                  <p class="field-hint" id="consult-date-hint"></p>
-                </div>
-                <div class="field">
-                  <label for="consult-time">Preferred time <span aria-hidden="true">*</span></label>
-                  <select id="consult-time" name="preferred_time" required disabled>
-                    <option value="">Select a date first</option>
-                  </select>
-                </div>
-              </div>
-              <p class="consult-note">
-                Requested times are subject to availability — Momentum reviews
-                every request and confirms your appointment personally.
-              </p>
-            </div>
-            <div class="consult-nav">
-              <button type="button" class="btn btn-outline" data-step-back>Back</button>
-              <button type="button" class="btn" data-step-next>Continue</button>
-            </div>
-          </section>
-
-          <!-- STEP 3 — client information -->
-          <section class="consult-panel" data-step="3" hidden>
             <div class="consult-panel-head">
               <h3 class="consult-panel-title">Your information</h3>
               <p class="consult-panel-copy">
@@ -307,34 +261,6 @@
                   like to cover in the consultation.
                 </p>
               </div>
-
-              <fieldset class="consult-choice">
-                <legend>Meeting preference <span aria-hidden="true">*</span></legend>
-                <!-- Options rendered from MEETING_PREFERENCES in js/consultation.js
-                     so the list is configured in one place. -->
-                <div class="consult-choice-options" id="meeting-preference-options"></div>
-              </fieldset>
-
-              <!-- Shown by js/consultation.js only while Physical Meeting is
-                   selected; the input is disabled when hidden so it is never
-                   submitted for other meeting formats. -->
-              <div class="consult-conditional" id="physical-meeting-fields" hidden>
-                <p class="consult-note">
-                  Physical meetings are subject to location and availability.
-                  Momentum will confirm the venue and any related arrangements
-                  after reviewing your request.
-                </p>
-                <div class="field">
-                  <label for="meeting-area">Preferred meeting location or area</label>
-                  <input
-                    type="text"
-                    id="meeting-area"
-                    name="preferred_meeting_area"
-                    placeholder="Dar es Salaam, city centre, client office, or preferred area"
-                    disabled
-                  />
-                </div>
-              </div>
             </div>
             <div class="consult-nav">
               <button type="button" class="btn btn-outline" data-step-back>Back</button>
@@ -342,8 +268,8 @@
             </div>
           </section>
 
-          <!-- STEP 4 — review before sending -->
-          <section class="consult-panel" data-step="4" hidden>
+          <!-- STEP 3 — review before sending -->
+          <section class="consult-panel" data-step="3" hidden>
             <div class="consult-panel-head">
               <h3 class="consult-panel-title">Review your request</h3>
               <p class="consult-panel-copy">
@@ -354,22 +280,21 @@
             <div class="consult-review">
               <section class="consult-review-group">
                 <header class="consult-review-head">
-                  <h4>Consultation</h4>
+                  <h4>Your details</h4>
                   <button type="button" class="consult-edit" data-edit-step="2">Edit</button>
                 </header>
                 <dl>
-                  <div><dt>Date</dt><dd id="review-date">—</dd></div>
-                  <div><dt>Time</dt><dd id="review-time">—</dd></div>
-                  <div><dt>Timezone</dt><dd>East Africa Time (UTC+3)</dd></div>
-                  <div><dt>Meeting preference</dt><dd id="review-meeting">—</dd></div>
-                  <div id="review-location-row" hidden><dt>Meeting area</dt><dd id="review-location"></dd></div>
+                  <div><dt>Full name</dt><dd id="review-name">—</dd></div>
+                  <div><dt>Email</dt><dd id="review-email">—</dd></div>
+                  <div><dt>Phone / WhatsApp</dt><dd id="review-phone">—</dd></div>
+                  <div id="review-business-row" hidden><dt>Business / Organization</dt><dd id="review-business"></dd></div>
                 </dl>
               </section>
 
               <section class="consult-review-group">
                 <header class="consult-review-head">
                   <h4>Project</h4>
-                  <button type="button" class="consult-edit" data-edit-step="3">Edit</button>
+                  <button type="button" class="consult-edit" data-edit-step="2">Edit</button>
                 </header>
                 <dl>
                   <div><dt>Service</dt><dd id="review-service">—</dd></div>
@@ -389,8 +314,8 @@
               <button type="submit" class="btn btn-lg">Send Request on WhatsApp</button>
             </div>
             <p class="response-note">
-              WhatsApp will open with your consultation details. Review the
-              message and tap Send to complete your request.
+              WhatsApp will open with your request details. Review the message
+              and tap Send — Momentum will get back to you with the next steps.
             </p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </section>
@@ -447,7 +372,6 @@
     </div>
   </footer>
 
-  <script src="js/availability.js"></script>
   <script src="js/consultation.js"></script>
   <script src="js/main.js"></script>
 </body>
