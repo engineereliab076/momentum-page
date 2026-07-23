@@ -58,7 +58,7 @@ All colours and fonts are CSS variables in the `:root` block at the top of
 | `--color-accent`    | Buttons / strong accents   | `#000000` |
 | `--color-divider-1` | Lightest dividers / fills  | `#f5f5f5` |
 | `--color-divider-2` | Slightly stronger lines    | `#e5e5e5` |
-| `--font-sans`       | Typeface (Inter by default) | —        |
+| `--font-sans`       | Typeface (self-hosted Montserrat) | —  |
 
 ## Things to fill in before going live
 

@@ -9,14 +9,8 @@
     content="Momentum is a marketing and technology studio. Website development, AI and business automation, and marketing and advertising — from brand identity and content to campaigns that deliver measurable growth."
   />
 
-  <!-- Modern sans-serif font. Swap the family here + the --font-sans variable to rebrand. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <!-- Montserrat (the official typeface) is self-hosted in css/styles.css
+       via @font-face — no external font CDN. -->
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/navigation.js" defer></script>
 </head>
@@ -35,10 +29,10 @@
         loop
         playsinline
         preload="metadata"
-        poster="photos/new-video-poster.jpg"
+        poster="photos/hero-video-poster.jpg"
         aria-hidden="true"
       >
-        <source src="videos/new-video.mp4" type="video/mp4" />
+        <source src="videos/hero-video.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
 
